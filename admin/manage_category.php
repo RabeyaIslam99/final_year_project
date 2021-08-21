@@ -33,7 +33,7 @@
        <td>rabeyatonny</td>
        <td>
              <a href="#" class="btn-secondary"> Update admin</a>
-            <a href="#" class="btn-danger">Delete Admin</a>
+            <a href="#" class="btn-danger">Delete Ad</a>
 
        </td>
        </tr>
