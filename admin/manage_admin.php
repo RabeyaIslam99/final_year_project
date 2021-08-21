@@ -1,0 +1,102 @@
+<?php include('partials/menu.php');?>
+   
+    <!--Main content  section starts -->
+  
+      <div  class="main-content">
+          <div class="wrapper">
+             <h1>Manage Admin</h1>
+         </br> </br> 
+        <?php 
+  
+          if(isset($_SESSION['add']))
+       {
+             echo $_SESSION['add'];//Displaying session message
+             unset($_SESSION['add']);//Removing  session message
+       }
+  
+        ?>
+        </br></br></br>
+    <!--Button to add Admin-->
+
+    <a href="add_admin.php" class="btn-primary"> Add more admin</a>
+</br> </br> </br> </br>
+        
+   
+       <table class="tbl-full">
+       <tr>
+           <th>Serial Number</th>
+           <th>Full Name</th>
+           <th>UserName</th>
+           <th>Actions</th>
+           
+        </tr>
+    
+       
+       <?php 
+           //Query to get all admin 
+           $sql = "SELECT * FROM  tbl_admin";
+           //Executed the query
+           $res = mysqli_query($conn,$sql);
+           //Check whether the query is executed or not 
+           if($res==TRUE)
+           {
+               //Check Rows to check whether we have data in database or not
+               $count = mysqli_num_rows($res);//Function to get all the rows in database
+
+               $sn =1; //Create the value and assign the value
+               //Check the num of rows 
+               if($count>0)
+               {
+                   //We have data in database
+                   while($rows = mysqli_fetch_assoc($res))
+                   {
+                   //Using while loop to get all the data from database
+                   //And while loop will run as long as we have data in database 
+
+                   //Get individual data
+                   $id = $rows['id'];
+                   $full_name = $rows['full_name'];
+                   $username =$rows['username'];
+                    
+                   //Display the values in our table
+                   ?>
+
+                      <tr>
+                        <td><?php echo $sn++; ?></td>
+                       <td><?php echo $full_name; ?></td>
+                       <td><?php echo $username; ?></td>
+                       <td>
+                         <a href="#" class="btn-secondary">Update admin</a>
+                    <a href="<?php echo SITEURL;?>admin/delete_admin.php?id=<?php echo $id;?>" class="btn-danger">Delete Admin</a>
+                       </td>
+                        </tr
+ 
+
+
+                   <?php
+
+
+                   }
+                }
+                   else
+                   {
+                        //we do not have data in data base
+
+                   }
+
+
+
+               }
+            
+       ?>
+  
+           </div>
+              
+              </div>
+              </table>
+              </br></br>
+  <!-- Main content  section ends -->
+
+
+ 
+  <?php include('partials/footer.php');?>
