@@ -18,14 +18,14 @@
    <form action="" method="POST">
     <table class="tbl-30">
         <tr>
-            <td>Full Name:</td>
+            <td>FullName:</td>
             <td>
                 <input type="text" name="full_name" placeholder="Enter your name">
             </td>
             <td></td>
         </tr>
         <tr>
-            <td>User Name:</td>
+            <td>UserName:</td>
             <td>
                 <input type="text" name="username" placeholder="Your username">
             </td>
@@ -87,7 +87,7 @@
       //Data Inserted 
       //echo "Data successfully inserted";
       //Create a session variable to display message
-      $_SESSION['add'] = "Admin added successfully";
+      $_SESSION['add'] = "<div class='true'>Admin added successfully </div>";
       //Redirect page Manage admin
       header("location:".SITEURL.'admin/manage_admin.php');
     }
@@ -96,7 +96,7 @@
         //Fail to insert data
         // echo "Failed to insert the data";
          //Create a session variable to display message
-      $_SESSION['add'] = "Failed to add admin";
+      $_SESSION['add'] = "<div class='false'>Failed to add admin</div>";
       //Redirect page ADD admin
       header("location:".SITEURL.'admin/add_admin.php');
     }

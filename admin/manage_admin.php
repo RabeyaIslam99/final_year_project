@@ -13,6 +13,11 @@
              echo $_SESSION['add'];//Displaying session message
              unset($_SESSION['add']);//Removing  session message
        }
+       if(isset($_SESSION['delete']))
+       {
+           echo $_SESSION['delete'];
+           unset($_SESSION['delete']);
+       }
   
         ?>
         </br></br></br>
@@ -66,8 +71,8 @@
                        <td><?php echo $full_name; ?></td>
                        <td><?php echo $username; ?></td>
                        <td>
-                         <a href="#" class="btn-secondary">Update admin</a>
-                    <a href="<?php echo SITEURL;?>admin/delete_admin.php?id=<?php echo $id;?>" class="btn-danger">Delete Admin</a>
+                      <a href="#" class="btn-secondary">UpdateAdmin</a>
+                      <a href="<?php echo SITEURL; ?>admin/delete_admin.php?id=<?php echo $id; ?>" class="btn-danger">DeleteAdmin</a>
                        </td>
                         </tr
  
@@ -89,12 +94,14 @@
                }
             
        ?>
-  
-           </div>
               
-              </div>
-              </table>
-              </br></br>
+            
+        
+                 </div>
+              
+                 </div>
+                 </table>
+            </br></br>
   <!-- Main content  section ends -->
 
 
