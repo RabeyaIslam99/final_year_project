@@ -20,7 +20,7 @@
        }
   
         ?>
-        </br></br></br>
+        </br></br>
     <!--Button to add Admin-->
 
     <a href="add_admin.php" class="btn-primary"> Add more admin</a>
@@ -71,8 +71,8 @@
                        <td><?php echo $full_name; ?></td>
                        <td><?php echo $username; ?></td>
                        <td>
-                      <a href="#" class="btn-secondary">UpdateAdmin</a>
-                      <a href="<?php echo SITEURL; ?>admin/delete_admin.php?id=<?php echo $id; ?>" class="btn-danger">DeleteAdmin</a>
+                         <a href="<?php echo SITEURL; ?>admin/update_admin.php?id=<?php echo $id; ?>" class="btn-secondary">Update</a>
+                         <a href="<?php echo SITEURL; ?>admin/delete_admin.php?id=<?php echo $id; ?>" class="btn-danger">Delete</a>
                        </td>
                         </tr
  
