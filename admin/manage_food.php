@@ -11,7 +11,7 @@
 </br> </br> </br> </br>
        <table class="tbl-full">
        <tr>
-           <th>Serial Number</th>
+           <th>S.N</th>
            <th>Full Name</th>
            <th>UserName</th>
            <th>Actions</th>

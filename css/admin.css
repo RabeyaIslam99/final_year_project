@@ -42,7 +42,7 @@ table tr td{
 .btn-primary{
     background-color: #1e90ff;
     padding: 1%;
-    color: white;
+    color: #141516;
     text-decoration: none;
     font-weight: bold;
     
@@ -51,7 +51,7 @@ table tr td{
 }
 .btn-primary:hover{
 
-    background-color: #b8b9c5;
+    background-color: #487eb0;
 }
 .btn-secondary{
     background-color: #7bed9f;

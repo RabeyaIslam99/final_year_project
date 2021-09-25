@@ -2,7 +2,7 @@
    
     <!--Main content  section starts -->
   
-      <div  class="main-content">
+    <div  class="main-content">
           <div class="wrapper">
              <h1>Manage Admin</h1>
          </br> </br> 
@@ -26,15 +26,15 @@
   
         ?>
         </br></br>
-    <!--Button to add Admin-->
+      <!--Button to add Admin-->
 
-    <a href="add_admin.php" class="btn-primary"> Add more admin</a>
-</br> </br> </br> </br>
+         <a href="add_admin.php" class="btn-primary"> Add more admin</a>
+      </br> </br> </br> </br>
         
    
        <table class="tbl-full">
-       <tr>
-           <th>Serial Number</th>
+        <tr>
+           <th>S.N</th>
            <th>Full Name</th>
            <th>UserName</th>
            <th>Actions</th>
@@ -56,7 +56,7 @@
                $sn =1; //Create the value and assign the value
                //Check the num of rows 
                if($count>0)
-               {
+                 {
                    //We have data in database
                    while($rows = mysqli_fetch_assoc($res))
                    {
@@ -69,43 +69,43 @@
                    $username =$rows['username'];
                     
                    //Display the values in our table
-                   ?>
+?>
 
-                      <tr>
+                    <tr>
                         <td><?php echo $sn++; ?></td>
-                       <td><?php echo $full_name; ?></td>
-                       <td><?php echo $username; ?></td>
+                        <td><?php echo $full_name; ?></td>
+                        <td><?php echo $username; ?></td>
                        <td>
-                         <a href="<?php echo SITEURL; ?>admin/update_admin.php?id=<?php echo $id; ?>" class="btn-secondary">Update</a>
-                         <a href="<?php echo SITEURL; ?>admin/delete_admin.php?id=<?php echo $id; ?>" class="btn-danger">Delete</a>
+                        <a href="<?php echo SITEURL; ?>admin/update_password.php?id=<?php echo $id; ?>" class="btn-primary">ChangePassword</a>
+                        <a href="<?php echo SITEURL; ?>admin/update_admin.php?id=<?php echo $id; ?>" class="btn-secondary">Update</a>
+                        <a href="<?php echo SITEURL; ?>admin/delete_admin.php?id=<?php echo $id; ?>" class="btn-danger">Delete</a>
                        </td>
-                        </tr
+                    </tr
  
 
 
-                   <?php
+                <?php
 
 
                    }
-                }
+                 }
                    else
-                   {
+                    {
                         //we do not have data in data base
 
-                   }
+                    }
 
 
 
-               }
-            
-       ?>
+                 }
+               ?>
               
             
         
-                 </div>
+        </div>
               
-                 </div>
-                 </table>
+    </div>
+    </table>
             </br></br>
   <!-- Main content  section ends -->
 
