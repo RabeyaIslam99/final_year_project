@@ -38,13 +38,15 @@
             </td>
             <td></td>
         </tr>
-        <tr>
+        
+    </table>
+    <br>
+    <tr>
             <td colspan="2">
                 <input type="submit" name="submit" value="Add admin" class="btn-secondary">
 
             </td>
         </tr>
-    </table>
        </form>
 
    </div> 

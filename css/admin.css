@@ -11,10 +11,17 @@
 }
 .wrapper{
     
-    padding:  1% ;
+    padding:  4% ;
     width: 80%;
     margin: 0 auto;
+    color: darkcyan;
+  
 }
+
+    
+
+
+
 .text-center{
     text-align: center;
 
@@ -25,14 +32,24 @@
 }
 .tbl-full{
     width: 80%;
+    border: double;
+    background-color: cornsilk;
+    margin: 0%;
+    
 }
+
 .tbl-30{
-    width: 30%;
+    width: 50%;
+  border: double;
+  
 }
+
 table tr th{
     border-bottom: 1px solid black;
     padding: 1%;
     text-align: left;
+    border: ridge;
+    background-color: blanchedalmond;
 }
 table tr td{
     padding: 1%;
@@ -42,9 +59,11 @@ table tr td{
 .btn-primary{
     background-color: #1e90ff;
     padding: 1%;
-    color: #141516;
+    color:white;
     text-decoration: none;
     font-weight: bold;
+    border: ridge;
+    
     
 
 
@@ -59,12 +78,21 @@ table tr td{
     color: black;
     text-decoration: none;
     font-weight: bold;
-
+    border: ridge;
+    
+   
+    
+    
 
 }
 .btn-secondary:hover{
 
     background-color:#2ed573;
+  
+    
+    
+    
+    
 }
 .btn-danger{
     background-color: #ff7f50;
@@ -72,6 +100,7 @@ table tr td{
     color: white;
     text-decoration: none;
     font-weight: bold;
+    border: double;
 
 
 }
@@ -109,6 +138,7 @@ table tr td{
     text-decoration: none;
     font-weight: bold;
     color: #ff6b81;
+   
 
 
 }
@@ -123,6 +153,10 @@ table tr td{
 
     background-color: #dfe4ea;
     padding: 3% 0;
+    background: linear-gradient(rgba(0,0,0,0.5),#eb74ab),url(../images/bc.jpg);
+    height: 150vh;
+    background-size: cover;
+
 }
 .col-4{
     width: 18%;

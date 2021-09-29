@@ -23,6 +23,16 @@
            echo $_SESSION['update'];
            unset($_SESSION['update']);
        }
+       if(isset($_SESSION['user-not-found']))
+       {
+           echo $_SESSION['user-not-found'];
+           unset($_SESSION['user-not-found']);
+       }
+       if(isset($_SESSION['password-not-match']))
+       {
+           echo $_SESSION['password-not-match'];
+           unset($_SESSION['password-not-match']);
+       }
   
         ?>
         </br></br>
@@ -37,7 +47,7 @@
            <th>S.N</th>
            <th>Full Name</th>
            <th>UserName</th>
-           <th>Actions</th>
+           <th> Actions  </th>
            
         </tr>
     
@@ -92,6 +102,7 @@
                    else
                     {
                         //we do not have data in data base
+                        
 
                     }
 
@@ -104,11 +115,12 @@
         
         </div>
               
-    </div>
+ </div>
     </table>
             </br></br>
   <!-- Main content  section ends -->
 
+  <?php //include('partials/footer.php');?> 
+   
 
  
-  <?php include('partials/footer.php');?>
