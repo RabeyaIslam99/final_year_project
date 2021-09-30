@@ -45,7 +45,7 @@
                
                <td colspan="2">
                  <input type="hidden" name="id" value="<?php echo $id;?>">
-                 <input type="submit" name="submit" value="Change password" class="btn-secondary">
+                 <input type="submit" name="submit" value="Change password" class="btn-primary">
                </td>
                
            </tr> 
@@ -116,4 +116,4 @@
 ?>
 
 
-<?php include('partials/footer.php');?>
+<?php //include('partials/footer.php');?>

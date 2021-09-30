@@ -5,6 +5,9 @@
 <html>
 <head>
 <title> Food Order website - Home page </title></head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/admin.css">
 <body>
      <!--Menu section starts --> 
@@ -15,7 +18,10 @@
          <li><a href="manage_admin.php">Admin</a></li>
          <li><a href="manage_food.php">Food</a></li>
          <li><a href="manage_category.php">Category</a></li>
+         
          <li><a href="manage_order.php">Order</a></li>
+         <li><a href="">Contact info</a></li>
+       
        
        </ul>
 

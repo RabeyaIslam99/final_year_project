@@ -11,10 +11,12 @@
 }
 .wrapper{
     
-    padding:  4% ;
+    padding:  3% ;
     width: 80%;
     margin: 0 auto;
     color: darkcyan;
+    text-align: center;
+   
   
 }
 
@@ -33,7 +35,7 @@
 .tbl-full{
     width: 80%;
     border: double;
-    background-color: cornsilk;
+    
     margin: 0%;
     
 }
@@ -45,32 +47,46 @@
 }
 
 table tr th{
-    border-bottom: 1px solid black;
+    border-bottom: 2px  double black;
     padding: 1%;
-    text-align: left;
-    border: ridge;
-    background-color: blanchedalmond;
+    text-align: center;
+    
 }
 table tr td{
     padding: 1%;
+    font-weight: bold;
+    color: blanchedalmond;
 
 
 }
 .btn-primary{
-    background-color: #1e90ff;
+    background-color:pink;
     padding: 1%;
-    color:white;
+    color:black;
     text-decoration: none;
     font-weight: bold;
-    border: ridge;
+    font-family: 'Mulish', sans-serif;
+  
     
     
 
 
 }
+#add_more{
+    background-color:#22a6b3;
+    padding: 1%;
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Mulish', sans-serif;
+  
+    
+
+}
+
 .btn-primary:hover{
 
-    background-color: #487eb0;
+    background-color: #FF7777;
 }
 .btn-secondary{
     background-color: #7bed9f;
@@ -78,7 +94,8 @@ table tr td{
     color: black;
     text-decoration: none;
     font-weight: bold;
-    border: ridge;
+    font-family: 'Mulish', sans-serif;
+  
     
    
     
@@ -95,12 +112,13 @@ table tr td{
     
 }
 .btn-danger{
-    background-color: #ff7f50;
+    background-color:  #FF2442;
     padding: 1%;
-    color: white;
+    color: black;
     text-decoration: none;
     font-weight: bold;
-    border: double;
+    font-family: 'Mulish', sans-serif;
+    
 
 
 }
@@ -108,6 +126,7 @@ table tr td{
 
     background-color:#ff6348;
 }
+
 .success{
    color:green;
 
@@ -125,21 +144,25 @@ table tr td{
 
 /*Css for menu*/
 .menu{
-    border-bottom: 2px solid gray;
+  
+    background:#B53471;
 }
 .menu ul{
     list-style-type: none;
+  
 }
 .menu ul li{
     display: inline;
-    padding: 1%;
+    padding: 2%;
+ 
+    
+    
 }
 .menu ul li a{
     text-decoration: none;
     font-weight: bold;
-    color: #ff6b81;
+    color: white;
    
-
 
 }
 .menu ul li a:hover{
@@ -152,7 +175,7 @@ table tr td{
 
 
     background-color: #dfe4ea;
-    padding: 3% 0;
+    padding: 2% 0;
     background: linear-gradient(rgba(0,0,0,0.5),#eb74ab),url(../images/bc.jpg);
     height: 150vh;
     background-size: cover;

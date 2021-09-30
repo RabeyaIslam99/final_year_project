@@ -38,7 +38,7 @@
         </br></br>
       <!--Button to add Admin-->
 
-         <a href="add_admin.php" class="btn-primary"> Add more admin</a>
+         <a href="add_admin.php" id="add_more" class="btn-primary"> Add more admin</a>
       </br> </br> </br> </br>
         
    
