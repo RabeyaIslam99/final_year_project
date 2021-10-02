@@ -7,7 +7,7 @@
      </br> </br> 
     <!--Button to add Admin-->
 
-    <a href="#" id="add_more" class="btn-primary"> Add More Order</a>
+    <a href="#" id="add_more" > Add More Order</a>
 </br> </br> </br> </br>
        <table class="tbl-full">
        <tr>

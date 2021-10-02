@@ -4,7 +4,7 @@
   
     <div  class="main-content">
           <div class="wrapper">
-             <h1>Manage Admin</h1>
+             <h1 >Manage Admin</h1>
          </br> </br> 
         <?php 
   
@@ -33,16 +33,21 @@
            echo $_SESSION['password-not-match'];
            unset($_SESSION['password-not-match']);
        }
-  
+      if(isset($_SESSION['change-pwd']))
+       {
+           echo $_SESSION['change-pwd'];
+           unset($_SESSION['change-pwd']);
+       }
+
         ?>
         </br></br>
       <!--Button to add Admin-->
 
-         <a href="add_admin.php" id="add_more" class="btn-primary"> Add more admin</a>
+         <a href="add_admin.php"  id="add_more"> Add more admin</a>
       </br> </br> </br> </br>
         
    
-       <table class="tbl-full">
+       <table class="table" >
         <tr>
            <th>S.N</th>
            <th>Full Name</th>
@@ -86,9 +91,9 @@
                         <td><?php echo $full_name; ?></td>
                         <td><?php echo $username; ?></td>
                        <td>
-                        <a href="<?php echo SITEURL; ?>admin/update_password.php?id=<?php echo $id; ?>" class="btn-primary">ChangePassword</a>
-                        <a href="<?php echo SITEURL; ?>admin/update_admin.php?id=<?php echo $id; ?>" class="btn-secondary">Update</a>
-                        <a href="<?php echo SITEURL; ?>admin/delete_admin.php?id=<?php echo $id; ?>" class="btn-danger">Delete</a>
+                        <a href="<?php echo SITEURL; ?>admin/update_password.php?id=<?php echo $id; ?>"class=" btn-primary">ChangePassword</a>
+                        <a href="<?php echo SITEURL; ?>admin/update_admin.php?id=<?php echo $id; ?>"class="btn-secondary">Update</a>
+                        <a href="<?php echo SITEURL; ?>admin/delete_admin.php?id=<?php echo $id; ?>"class=" btn-danger">Delete</a>
                        </td>
                     </tr
  

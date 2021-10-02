@@ -45,7 +45,7 @@
                
                <td colspan="2">
                  <input type="hidden" name="id" value="<?php echo $id;?>">
-                 <input type="submit" name="submit" value="Change password" class="btn-primary">
+                 <input type="submit" name="submit" value="Change password" id="cng-pass">
                </td>
                
            </tr> 
@@ -87,6 +87,32 @@
               {
                   //update the password
                   echo "Password match ";
+                  $sql2 ="UPDATE tbl_admin SET 
+                  password= '$new_password'
+                  WHERE id=$id
+
+                  ";
+
+                  //Execute the query
+                  $res2= mysqli_query($conn, $sql2);
+                  //Check whether the query executed or not
+                   if($res2==TRUE)
+                  {
+                     
+                    //Display the succcess message
+                    //Redirect to manage admin page with success massege
+                  $_SESSION['change-pwd'] = "<div class='success'>Password changed successfully.</div>";
+                 //Redirect the user
+                  header("location:".SITEURL.'admin/manage_admin.php');
+                  }
+                 
+                  else 
+                  {
+                      //Display error message
+                         //Redirect to manage admin page with error massege
+                 
+
+                  }
               }
               else
               {

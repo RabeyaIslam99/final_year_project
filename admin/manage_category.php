@@ -8,7 +8,7 @@
      </br> </br> 
     <!--Button to add Admin-->
 
-    <a href="#" id="add_more" class="btn-primary"> Add more Category </a>
+    <a href="#" id="add_more"> Add more Category </a>
 </br> </br> </br> </br>
        <table class="tbl-full">
        <tr>
