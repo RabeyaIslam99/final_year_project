@@ -53,17 +53,19 @@
                       <input type="text" name="username" value="<?php echo $username;?>">
                   </td>
                 </tr> 
-                
-            </table>
-        </form>
-        <br><br>
-        <tr>
+                <br><br>
+                <tr>
                     <td colspan="2">
                       <input type="hidden" name="id" value="<?php echo $id;?>">
-                      <input type="submit" name="submit" value="Update admin" class="btn-secondary">
+                      <input type="submit" name="submit" value="Update admin" class="btn-primary">
                     </td>
                     
                 </tr> 
+                
+            </table>
+        </form>
+       
+       
     </div>
 </div>
 <?php 
@@ -97,7 +99,7 @@
        else
        {
            //Failed to update admin
-           $_SESSION['update'] = "<div class ='error'> Fail to delete admin .</div> ";
+           $_SESSION['update'] = "<div class ='error'> Fail to update admin .</div> ";
            //Redirect to manage admin page 
            header("location:".SITEURL.'admin/manage_admin.php');
        }
