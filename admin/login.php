@@ -17,6 +17,11 @@
                    echo $_SESSION['login'];
                    unset($_SESSION['login']);
                }
+               if(isset($_SESSION['no-login-message']))
+               {
+                   echo $_SESSION['no-login-message'];
+                   unset($_SESSION['no-login-message']);
+               }
               
               ?>
                 
@@ -30,7 +35,7 @@
                      Username: <br>
                     <input type="text" name="username" placeholder="Enter your usename"><br><br>
                     Password: 
-                    <input type="text" name="password" placeholder="Enter your password"><br><br>
+                    <input type="password" name="password" placeholder="Enter your password"><br><br>
 
                     <input type="submit" name="submit" placeholder="Login"><br><br>
 
@@ -60,7 +65,7 @@
         //Press for login
         //1.Get the data from login form
         $username = $_POST['username'];
-        $password = md5($_POST['password']);
+        $password =md5($_POST['password']);//Password Encryption with MD5
 
         //2.SQL to check whether the user with username and password exists or not
         $sql = "SELECT * FROM tbl_admin WHERE username = '$username' AND password = '$password'";
@@ -75,6 +80,7 @@
         {
             //user available
             $_SESSION['login'] = "<div class = 'success'>Login successfully.</div>";
+            $_SESSION['user'] = $username; //To check whether the user is logged in or not and logout wil unset it
 
             //Redirect to home/dashboard
 

@@ -6,10 +6,24 @@
   <div class="wrapper">
      <h1>Manage Category</h1>
      </br> </br> 
-    <!--Button to add Admin-->
+           
+            <?php 
+              if(isset($_SESSION['add']))
+                {
+                    echo $_SESSION['add'];
+                    unset($_SESSION['add']);
 
-    <a href="#" id="add_more"> Add more Category </a>
-</br> </br> </br> </br>
+                }
+         
+         
+            ?>
+
+           </br> </br> 
+
+      <!--Button to add Admin-->
+
+      <a href="<?php  echo SITEURL; ?>admin/add_category.php" id="add_more"> Add more Category </a>
+    </br> </br> </br> </br>
        <table class="tbl-full">
        <tr>
            <th>S.N</th>
