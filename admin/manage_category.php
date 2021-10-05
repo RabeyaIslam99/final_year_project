@@ -36,8 +36,8 @@
        <td>Rabeya islam</td>
        <td>rabeyatonny</td>
        <td>
-            <a href="#" class="btn-secondary">UpdateAdmin</a>
-            <a href="#" class="btn-danger">DeleteAdmin</a>
+            <a href="#" class="btn-secondary">Update Category</a>
+            <a href="#" class="btn-danger">Delete Category</a>
 
        </td>
        </tr>
@@ -46,8 +46,8 @@
        <td>Rabeya islam</td>
        <td>rabeyatonny</td>
        <td>
-             <a href="#" class="btn-secondary"> UpdateAdmin</a>
-            <a href="#" class="btn-danger">DeleteAdmin</a>
+             <a href="#" class="btn-secondary"> Update Category</a>
+            <a href="#" class="btn-danger">Delete Category</a>
 
        </td>
        </tr>
@@ -56,8 +56,8 @@
        <td>Rabeya islam</td>
        <td>rabeyatonny</td>
        <td>
-             <a href="#" class="btn-secondary">UpdateAdmin</a>
-              <a href="#" class="btn-danger">DeleteAdmin</a>
+             <a href="#" class="btn-secondary">Update Category</a>
+              <a href="#" class="btn-danger">Delete Category</a>
        </td>
        </tr>
 

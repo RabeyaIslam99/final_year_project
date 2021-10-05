@@ -15,6 +15,12 @@
                     unset($_SESSION['add']);
 
                 }
+                if(isset($_SESSION['upload']))
+                {
+                    echo $_SESSION['upload'];
+                    unset($_SESSION['upload']);
+
+                }
          
          
             ?>
@@ -23,7 +29,7 @@
                 
          <!--Add category form starts -->
 
-            <form action="" method="POST">
+            <form action="" method="POST" enctype="multipart/form-data">
                 <table class="tbl-30"> 
                     <tr>
                        <td> Title : </td>
@@ -32,11 +38,23 @@
 
                        </td>
                     </tr>
+
+                       <tr>
+                          <td>Select Image:</td>
+                          <td>
+                            <input type="file" name="image">
+                            
+                          </td>
+
+
+                       </tr>
+
+
                     <tr>
                        <td> Featured : </td>
                        <td>
-                            <input type="radio" name="featured" placeholder="Yes"> Yes
-                            <input type="radio" name="featured" placeholder="No"> No
+                            <input type="radio" name="featured" value="Yes"> Yes
+                            <input type="radio" name="featured" value="No"> No
 
                        </td>
                     </tr>
@@ -44,8 +62,8 @@
                     <tr>
                        <td> Active : </td>
                        <td>
-                            <input type="radio" name="active" placeholder="Yes"> Yes
-                            <input type="radio" name="active" placeholder="No"> No
+                            <input type="radio" name="active" value="Yes"> Yes
+                            <input type="radio" name="active" value="No"> No
 
                        </td>
                     </tr>
@@ -61,11 +79,7 @@
                 <br><br>
 
               
-            </form>
-
-
-                 
-           
+            </form>    
            <!--Add category form ends -->
 
            <?php 
@@ -78,10 +92,12 @@
 
                //1.Get the values from category form
                $title = $_POST['title'];
+              
+
 
                //For radio input, we need to check whether the button is selected or not
                if(isset($_POST['featured']))
-               {
+             {
                    //Get the value from from
                    $featured = $_POST['featured'];
 
@@ -89,34 +105,47 @@
                else
                 {
                    //Set the default value
-                   $featured = "No";
+                  $featured = "No";
                
-                }
+               }
                if(isset($_POST['active']))
                {
-                   $active = $_POST['active'];
-               }
+                 $active = $_POST['active'];
+              }
                else 
                {
                    $active = "No";
                }
 
+
+               //Check whether the image name query  is selected or not and set the value for image name accordingly
+               
+                //print_r($_FILES['image']);
+
+                 //die(); //Break the code here
+
+             
+
+
                //2. Create SQL Query to insert Category into Database
                $sql = "INSERT INTO tbl_category SET 
-                       title = '$title',
-                       featured= '$featured',
-                       active= '$active'
+                       title='$title',
+                       image_name = '$image_name',
+                       featured='$featured',
+                       active='$active'
+
                     ";
 
                     //3.Execute the Query and Save in Database
                     $res = mysqli_query($conn, $sql);
+    
                     
                     //4. Check Whether the query executed or not or data added or not
 
                     if($res==TRUE)
                     {
                        //Query executed and Category added
-                        $_SESSION['add'] = "<div class='success'>Category Added Successfully </div> ";
+                        $_SESSION['add'] = "<div class='success'>Category Added Successfully </div>";
                         //Redirect to Manage category page
                         header("location:".SITEURL.'admin/manage_category.php');
                     }
@@ -128,8 +157,8 @@
                         header("location:".SITEURL.'admin/add_category.php');
                     }
 
-                   
-           }
+                }
+         
 
            ?>
 
