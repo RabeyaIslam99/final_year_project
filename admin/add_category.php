@@ -124,6 +124,45 @@
 
                  //die(); //Break the code here
 
+                 if(isset($_FILES['image']['name']))
+                 {
+                     $image_name = $_FILES['image']['name'];
+
+                     $source_path = $_FILES['image']['tmp_name'];
+
+                     $destination_path = "../images/cayegory/".$image_name;
+
+                     // Finally upload the image
+
+                     $upload = move_uploaded_file($source_path, $destination_path);
+
+                     //Check whether image is uploaded or not
+
+                     //And if the image is not uploaded we will stop the process redirect with error message
+
+                     if($upload==false)
+                     {
+                         //set message
+                         $_SESSION['upload'] = "<div class ='error'>Failed to upload image.</div>";
+                         //Redirect to add category page
+                         header("location:".SITEURL."admin/add_category.php");
+
+                         //Stop the process 
+                         die();
+
+
+                     }
+
+
+
+
+
+                 }
+                 else {
+                     //Don't upload image and set the image_name value as blank
+                     $image_name ="";
+                 }
+
              
 
 
@@ -153,7 +192,7 @@
                     {
                         //Failed to Add category 
                         $_SESSION['add'] = "<div class='error'>Failed to add category.</div> ";
-                        //Redirect to Manage category page
+                        //Redirect to add category page
                         header("location:".SITEURL.'admin/add_category.php');
                     }
 

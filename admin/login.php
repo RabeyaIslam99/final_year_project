@@ -7,9 +7,10 @@
     </head>
     
     <body>
-        
-          <div class="login"> 
-              <h1 class="text-center">Login</h1>
+           <div class="log">
+          <div class="login-box" > 
+              <h2 class="text-center" id="tgl-login">Login</h2>
+              <br><br>
               
               <?php
                if(isset($_SESSION['login']))
@@ -31,13 +32,13 @@
               <br><br>
               
               <!-- Login form starts here -->
-                <form action="" method="POST"> 
-                     Username: <br>
-                    <input type="text" name="username" placeholder="Enter your usename"><br><br>
-                    Password: 
-                    <input type="password" name="password" placeholder="Enter your password"><br><br>
+                <form class="input-group"  action="" method="POST"> 
+                     Username
+                    <input type="text" class="input-field"  name="username" placeholder="Enter your usename">
+                    Password
+                    <input type="password"  class="input-field" name="password" placeholder="Enter your password">
 
-                    <input type="submit" name="submit" placeholder="Login"><br><br>
+                    <input type="submit" class="submit-btn" name="submit"  value="Log in"><br><br>
 
 
 
@@ -50,8 +51,9 @@
 
                <!-- Login form ends here -->
 
-              <p  class="text-center"> Created by - Rabeya Islam </p>
+              <p  class="text-center"> </p>
           </div>
+            </div>
     </body>
 
 

@@ -226,10 +226,83 @@ color: white;
 
 
 /*css for login */
+.log{
+    margin: 0;
+    background: linear-gradient(rgba(0,0,0,0.1),#eb74ab),url(../images/bc.jpg);
+    height: 150vh;
+    background-size: cover;
+    padding: 2% 0;
 
-.login{
-    border: 3px solid gray;
-    width: 30%;
+
+}
+
+
+
+
+
+.login-box{
+    
+    border: 1px solid gray;
+    width: 360px;
+    height: 440px;
     margin: 10% auto;
-    padding: 2%;
+    padding: 6% auto;
+    border-radius: 15px;
+    background-color: white;
+    
+   
+}
+#tgl-login{
+
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    font-weight: bold;
+
+   
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+
+}
+.input-group{
+
+    top: 270px;
+    position: absolute;
+    width: 280px;
+    
+    transition: .5s;
+    padding: 3%;
+
+}
+.input-field{
+
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit-btn{
+    
+    width: 60%;
+    padding: 15px 0;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto;
+    background: linear-gradient(to right,#ffccdd,#ff99bb);
+    border: 0;
+    outline: none;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
 }
