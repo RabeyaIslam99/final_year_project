@@ -128,9 +128,22 @@
                  {
                      $image_name = $_FILES['image']['name'];
 
+                     //Section to rename our iamge
+
+                     //Get the extension of our image(jpg,png,gif,etc) e.g "specialfood1.jpg"
+                     $ext = end(explode('.', $image_name));
+
+
+                     //Rename the image
+                     $image_name = "Food_category_".rand(000, 999).'.'.$ext;//eg. Food_category_834.jpg
+
+                     
+
+
+
                      $source_path = $_FILES['image']['tmp_name'];
 
-                     $destination_path = "../images/cayegory/".$image_name;
+                     $destination_path = "../images/category/".$image_name;
 
                      // Finally upload the image
 
