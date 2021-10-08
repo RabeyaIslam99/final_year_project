@@ -111,7 +111,7 @@
                if(isset($_POST['active']))
                {
                  $active = $_POST['active'];
-              }
+                }
                else 
                {
                    $active = "No";
@@ -125,10 +125,15 @@
                  //die(); //Break the code here
 
                  if(isset($_FILES['image']['name']))
-                 {
+                {
                      $image_name = $_FILES['image']['name'];
 
-                     //Section to rename our iamge
+                     //Upload the Image only if image is selected
+                     if($image_name!="")
+                    {
+
+
+                     //Auto rename our iamge
 
                      //Get the extension of our image(jpg,png,gif,etc) e.g "specialfood1.jpg"
                      $ext = end(explode('.', $image_name));
@@ -137,10 +142,7 @@
                      //Rename the image
                      $image_name = "Food_category_".rand(000, 999).'.'.$ext;//eg. Food_category_834.jpg
 
-                     
-
-
-
+                
                      $source_path = $_FILES['image']['tmp_name'];
 
                      $destination_path = "../images/category/".$image_name;
@@ -166,12 +168,12 @@
 
                      }
 
-
-
-
-
                  }
-                 else {
+
+
+                }
+                
+                else {
                      //Don't upload image and set the image_name value as blank
                      $image_name ="";
                  }
