@@ -203,7 +203,7 @@
                    //B...Remove the current image if available
                    if($current_image!="")
                    {
-                     $remove_path = "../images/category".$current_image;
+                     $remove_path = "../images/category/".$current_image;
 
 
                      $remove = unlink($remove_path);
@@ -260,14 +260,14 @@
                 
             //category updated
                $_SESSION['update'] = "<div class='success'> Category updated successfully  </div>";
-               header("location:".SITEURL.'admin/manage_category');
+               header("location:".SITEURL.'admin/manage_category.php');
 
 
               }
               else {
                  
                $_SESSION['update'] = "<div class='error'> Failed to update category </div>";
-               header("location:".SITEURL.'admin/manage_category');
+               header("location:".SITEURL.'admin/manage_category.php');
 
               }
 
