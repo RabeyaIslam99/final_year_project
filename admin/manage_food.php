@@ -7,8 +7,23 @@
      </br> </br> 
     <!--Button to add Admin-->
 
-    <a href="#" id="add_more" > Add More Food </a>
+    <a href="<?php echo SITEURL;?>admin/add_food.php" id="add_more" > Add More Food </a>
 </br> </br> </br> </br>
+      
+      
+           <?php 
+               if(isset($_SESSION['add']))
+                {
+                    echo $_SESSION['add'];
+                    unset($_SESSION['add']);
+                }
+              
+            ?>
+
+
+
+
+
        <table class="tbl-full">
        <tr>
            <th>S.N</th>
@@ -21,8 +36,8 @@
        <td>Rabeya islam</td>
        <td>rabeyatonny</td>
        <td>
-            <a href="#" class="btn-secondary">UpdateAdmin</a>
-            <a href="#" class="btn-danger">DeleteAdmin</a>
+            <a href="#" class="btn-secondary">Update food</a>
+            <a href="#" class="btn-danger">Delete food</a>
 
        </td>
        </tr>
@@ -31,8 +46,8 @@
        <td>Rabeya islam</td>
        <td>rabeyatonny</td>
        <td>
-             <a href="#" class="btn-secondary">UpdateAdmin</a>
-            <a href="#" class="btn-danger">DeleteAdmin</a>
+             <a href="#" class="btn-secondary">Update food</a>
+            <a href="#" class="btn-danger">Delete food</a>
 
        </td>
        </tr>
@@ -41,8 +56,8 @@
        <td>Rabeya islam</td>
        <td>rabeyatonny</td>
        <td>
-             <a href="#" class="btn-secondary">UpdateAdmin</a>
-              <a href="#" class="btn-danger">DeleteAdmin</a>
+             <a href="#" class="btn-secondary">Update food</a>
+              <a href="#" class="btn-danger">Delete food</a>
        </td>
        </tr>
 

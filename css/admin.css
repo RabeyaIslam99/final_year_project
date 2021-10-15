@@ -193,7 +193,7 @@ table tr td{
 
     background-color: #dfe4ea;
     padding: 2% 0;
-    background: linear-gradient(rgba(0,0,0,0.5),#eb74ab),url(../images/bc.jpg);
+    background: linear-gradient(rgba(0,0,0,0.12),#eb74ab),url(../images/bc.jpg);
     height: 150vh;
     background-size: cover;
 

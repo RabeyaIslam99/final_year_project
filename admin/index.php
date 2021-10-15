@@ -18,7 +18,7 @@
               ?>
                   <br><br>  
 
-     <div class="col-4 text-center">
+   <!--  <div class="col-4 text-center">
        <h1>5</h1>
        <br/>
        Categories
@@ -44,7 +44,9 @@
      </div>
      <div class="clearfix"></div>
 </div>
-     </div>
+     </div> -->
+
+
   <!-- Main content  section ends -->
 
 

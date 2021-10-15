@@ -9,7 +9,7 @@
     <body>
            <div class="log">
           <div class="login-box" > 
-              <h2 class="text-center" id="tgl-login">User Login</h2>
+              <h2 class="text-center" id="tgl-login">Admin Login</h2>
               <br><br>
               
               <?php
@@ -38,7 +38,7 @@
                     Password
                     <input type="password"  class="input-field" name="password" placeholder="Enter your password">
 
-                    <input type="submit" class="submit-btn" name="submit"  value=" User Log in"><br><br>
+                    <input type="submit" class="submit-btn" name="submit"  value="  Log in"><br><br>
 
 
 
