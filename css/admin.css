@@ -15,6 +15,7 @@
     width: 80%;
     margin: 0 auto;
     color: white;
+    font-weight: bold;
     text-align: center;
 
 
@@ -163,6 +164,8 @@ table tr td{
 .menu{
   
     background:#B53471;
+    box-shadow: 2px 2px 5px #B53471 ;
+  
 }
 .menu ul{
     list-style-type: none;
@@ -312,4 +315,8 @@ color: white;
     border-radius: 20px;
     font-weight: bold;
     text-align: center;
+}
+.card-text{
+    
+    background-color: cadetblue;
 }

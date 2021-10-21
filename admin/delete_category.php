@@ -64,7 +64,7 @@
     }
     else {
         //Set failed message and redirect
-        $_SESSION['delete'] = "<div class= 'error'> Faiked deleted successfullly. </div>";
+        $_SESSION['delete'] = "<div class= 'error'> Failed deleted successfullly. </div>";
         header("location:".SITEURL.'admin/manage_category.php');
     }
     
