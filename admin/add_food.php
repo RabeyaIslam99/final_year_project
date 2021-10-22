@@ -20,7 +20,7 @@
              ?>
             
 
-           <form axtion="" method="POST" nctype="multipart/form-data">
+           <form action="" method="POST" enctype="multipart/form-data">
              <table class="tbl-30">
                <tr>
                  <td>Title:</td>

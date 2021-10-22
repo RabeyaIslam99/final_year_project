@@ -35,6 +35,18 @@
                     echo $_SESSION['unauthorize'];
                     unset($_SESSION['unauthorize']);
                 }
+                if(isset($_SESSION[' update']))
+                {
+                    echo $_SESSION['update'];
+                    unset($_SESSION['update']);
+                }
+                if(isset($_SESSION[' remove-failed']))
+                {
+                    echo $_SESSION['remove-failed'];
+                    unset($_SESSION['remove-failed']);
+                }
+                
+                
 
               
             ?>
