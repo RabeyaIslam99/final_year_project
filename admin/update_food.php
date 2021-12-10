@@ -266,12 +266,16 @@
                          }
 
                         }
+                        else
+                        {
+                            $image_name = $current_image;//Default image when image is not selected
+
+                        }
                     }
                     else
                     {
-                        $image_name = $current_image;
-                       //
-
+                        $image_name = $current_image;//default image when button is not is clicked
+                       
 
                     }
 
@@ -298,15 +302,17 @@
                   if($res3==true)
                   {
                      //Query executed and food updated
-                     $_SESSION['update'] = "<div class='success'> Updated successfully</div>";
+                     $_SESSION['updated'] = "<div class='success'> Updated successfully</div>";
 
-                     //header('location:'.SITEURL.'admin/manage_food.php');
+                     
+                     header('location:'.SITEURL.'admin/manage_food.php');
+
                     
                   }
                   else
                   {
                         //failed to update food
-                        $_SESSION['update'] = "<div class='error'> Failed to update food</div>";
+                        $_SESSION['updated'] = "<div class='error'> Failed to update food</div>";
 
                         header('location:'.SITEURL.'admin/add_food.php');
 
