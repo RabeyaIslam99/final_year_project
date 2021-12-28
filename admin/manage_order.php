@@ -24,7 +24,7 @@
           <br> <br>
 
 
-          
+
        <table class="tbl-full">
        <tr>
            <th>S.N</th>
@@ -80,7 +80,31 @@
                         <td><?php echo $qty  ;?></td>
                         <td><?php echo  $total ;?></td>
                         <td><?php echo $order_date  ;?></td>
-                        <td><?php echo  $status ;?></td>
+
+                        <td>
+                            <?php 
+                            //ordered, ondelivery, canceled and delivered
+                            if($status=="ordered")
+                            {
+                                echo "<label>$status</label>";
+                            }
+                            elseif($status=="On Delivery")
+                            {
+                                echo "<label style='color: orange'>$status</label>";
+                            }
+                            elseif($status=="Delivered")
+                            {
+                                echo "<label style='color: green'>$status</label>";
+                            }
+                            elseif($status=="Canceled")
+                            {
+                                echo "<label style='color: red'>$status</label>";
+                            }
+
+
+                            ?>
+                        </td>
+
                         <td><?php echo $customer_name ;?></td>
                         <td><?php echo  $customer_contact ;?></td>
                         <td><?php echo $customer_email;?></td>

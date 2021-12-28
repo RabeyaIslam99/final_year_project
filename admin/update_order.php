@@ -81,12 +81,13 @@
                                 <input type="number" name="qty" value="<?php echo $qty;?>">
                             </td>
                         </tr> 
+
                         <tr> 
                      <td>Status :</td>
                             <td>
                                 <select name="status">
                                     <option <?php if($status=="ordered"){echo "selected";}?> value="ordered">Ordered</option>
-                                    <option <?php if($status=="On-Delivery"){echo "selected";}?> value="On-Delivery">On-delivery</option>
+                                    <option <?php if($status=="On Delivery"){echo "selected";}?> value="On Delivery">On-delivery</option>
                                     <option  <?php if($status=="Delivered"){echo "selected";}?>value="Delivered">Delivered</option>
                                     <option <?php if($status=="Canceled"){echo "selected";}?>value="Canceled">Canceled</option>
                                 </select>
@@ -119,22 +120,16 @@
                         <tr>
                         <td>Customer address :</td>
                             <td>
-                            <td>
                            <textarea  name="customer_address" cols="20" rows="5"><?php echo $customer_address;?></textarea>
                             </td>
                         </tr> 
-
-
-
-                        
-
 
 
                         
                         <tr>
                             <td colspan="2">
                                 <input type="hidden" name="id" value="<?php echo $id;?>">
-                                <input type="hidden" name="id" value="<?php echo $price;?>">
+                                <input type="hidden" name="price" value="<?php echo $price;?>">
                                 <input type="submit" name="submit" value="Update order" class="btn-secondary">
                             </td>
                         </tr> 
@@ -196,7 +191,7 @@
                   //failed to update
                   $_SESSION['update']=  "<div class='error'>Failed to updatee order info .</div >";
 
-                header('location:'.SITEURL.'admin/manage_order');
+                header('location:'.SITEURL.'admin/manage_order.php');
               }
 
 
