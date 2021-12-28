@@ -5,8 +5,8 @@
    
     <!--Main content  section starts -->
     <div  class="main-content">
-      <div class="wrapper">
-    <h1>DASHBOARD</h1>
+      <div >
+    <h2 class=" text-center">DASHBOARD</h1>
                <br><br>
               <?php
                  if(isset($_SESSION['login']))
@@ -18,33 +18,84 @@
               ?>
                   <br><br>  
 
-   <!--  <div class="col-4 text-center">
-       <h1>5</h1>
+   <div class="col-4 text-center">
+
+      <?php
+      // query and execute the qury 
+      $sql = "SELECT  *  FROM tbl_category";
+      $res = mysqli_query($conn, $sql);
+      //count rows
+      $count = mysqli_num_rows($res);
+
+
+      ?>
+       <h1><?php echo $count;?></h1>
        <br/>
        Categories
 
      </div>
+
+
      <div class="col-4 text-center">
-       <h1>5</h1>
+      <?php
+        // query and execute the qury 
+        $sql2 = "SELECT  *  FROM tbl_food";
+        $res2 = mysqli_query($conn, $sql2);
+        //count rows
+        $count2 = mysqli_num_rows($res2);
+
+
+        ?>
+       <h1><?php echo $count2;?></h1>
        <br/>
-       Categories
+      Foods
+
+     </div>
+
+
+
+     <div class="col-4 text-center">
+     <?php
+        // query and execute the qury 
+        $sql3 = "SELECT  *  FROM tbl_food";
+        $res3 = mysqli_query($conn, $sql3);
+        //count rows
+        $count3 = mysqli_num_rows($res3);
+
+
+        ?>
+       <h1><?php echo $count3;?></h1>
+       <br/>
+       Total orders
 
      </div>
      <div class="col-4 text-center">
-       <h1>5</h1>
-       <br/>
-       Categories
+            <?php
+            //Create SQL Query  to total revenue generated
+            //Aggregate function in sql
+            $sql4= "SELECT SUM(total) as total from tbl_order where status= 'delivered'";
 
-     </div>
-     <div class="col-4 text-center">
-       <h1>5</h1>
-       <br/>
-       Categories
+            $res4 =mysqli_query($conn, $sql4);
+             
+            //get the value
+            $row4= mysqli_fetch_assoc($res4);
+            //get the total revenue
+            $total_revenue = $row4['total'];
 
+
+
+            
+            
+            ?>
+
+
+       <h1>$<?php echo $total_revenue;?></h1>
+       <br/>
+     Reveneu generated
      </div>
      <div class="clearfix"></div>
 </div>
-     </div> -->
+     </div> 
 
 
   <!-- Main content  section ends -->
