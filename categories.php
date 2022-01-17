@@ -1,11 +1,23 @@
 
 <?php include('partials-font/menu.php'); ?>
-
+ 
 
     <!-- CAtegories Section Starts Here -->
     <section class="categories">
-        <div class="container">
-            <h2 class="text-center">Explore Foods</h2>
+       
+               <div class="explore" >
+            <div class="explore-info"> 
+               <h1 class="animate__animated animate__fadeInUp">All Your Family Needs Is A Warm And Homemade Meal</h1>
+               <p>So get fresh, tasty, pre-portioned ingredients with ultra-simple recipe cards to whip up heavenly meals in your very own kitchen.</p>
+            </div>
+              
+               <div class="tawa">
+                    <img src="images/tonnys-tawa.png" alt="">
+                </div>
+              
+               </div>
+               <div class="container">
+               <h2 class="text-center">Explore Foods</h2>
              <?php
                  
              //Display all the categories that are active

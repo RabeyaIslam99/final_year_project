@@ -4,13 +4,21 @@
     version: 1.0;
 */
 
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nanum+Gothic:wght@700&family=Oleo+Script&family=Open+Sans:ital,wght@0,700;1,800&family=Patua+One&family=Poppins&family=Roboto&family=Secular+One&family=Vidaloka&display=swap');
+
 /* CSS for All */
+
+
 *{
     margin: 0 0;
     padding: 0 0;
-    font-family: Arial, Helvetica, sans-serif;
+   
+    font-family: 'Patua One', cursive;
+
 }
-.container{
+   
+.containers{
     width: 80%;
     margin: 0 auto;
     padding: 1%;
@@ -49,19 +57,43 @@ a:hover{
 }
 
 .btn{
-    padding: 1%;
+    padding: 5%;
     border: none;
     font-size: 1rem;
     border-radius: 5px;
 }
+.btn-search{
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #ff6b81;
+    color: white;
+    cursor: pointer;
+    padding: 7px 20px;
+    
+
+}
+.btn-search:hover{
+    color: #ff4757;
+    background-color: white ;
+    border:  2px solid #ff4757;
+    
+
+}
+
+
+
 .btn-primary{
     background-color: #ff6b81;
     color: white;
     cursor: pointer;
+   
 }
 .btn-primary:hover{
-    color: white;
-    background-color: #ff4757;
+    color: #ff4757;
+    background-color: white ;
+    border:  2px solid #ff4757;
+    
 }
 h2{
     color: #2f3542;
@@ -99,28 +131,30 @@ fieldset{
 
 /* CSSS for navbar section */
 
-.logo{
-    width: 10%;
+.logo img{
+   height: 100px;
+    width: 12%;
     float: left;
-}
-.menu{
+  }
+  .menu {
     line-height: 60px;
-}
-.menu ul{
+  }
+  .menu ul {
     list-style-type: none;
-}
-
-.menu ul li{
+  }
+  
+  .menu ul li {
     display: inline;
     padding: 1%;
     font-weight: bold;
-}
+  }
+  
 
 
 /* CSS for Food SEarch Section */
 
 .food-search{
-    background-image: url(../images/bg.jpg);
+    /* background-image: url(../images/bg-1.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -145,6 +179,11 @@ fieldset{
     width: 28%;
     float: left;
     margin: 2%;
+   
+}
+.box-3:hover img{
+    transform: scale(0.9);
+    transition: 2s linear;
 }
 
 
@@ -154,23 +193,38 @@ fieldset{
     padding: 4% 0;
 }
 .food-menu-box{
-    width: 43%;
+    width: 30%;
     margin: 1%;
     padding: 2%;
     float: left;
     background-color: white;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 40px  gray;
+ 
+ 
+}
+.food-menu-box:hover {
+    transform: translateY(-20px);
+    transition: 3s linear;
+  
 }
 
-.food-menu-img{
-    width: 20%;
+.food-menu-img img{
+    width: 100%;
+    height: 300px;
     float: left;
+    margin-bottom: 10px;
 }
 
 .food-menu-desc{
     width: 70%;
     float: left;
     margin-left: 8%;
+    display: flex;
+    flex-direction: column;
+  
 }
 
 .food-price{
@@ -184,6 +238,11 @@ fieldset{
 
 
 /* CSS for Social */
+.social{
+    padding-top: 30px;
+    background-color: black;
+    height: 200px;
+}
 .social ul{
     list-style-type: none;
 }
@@ -209,6 +268,43 @@ fieldset{
     margin-bottom: 1%; 
     font-weight: bold;
 }
+
+.tawa img{
+    width: 400px;
+    height: 300px;
+   
+
+}
+
+.explore:hover .tawa img{
+     --translateX:4.37042px;
+    --translateY:14.5876px; 
+    --translateZ:20px;
+    transform: translateX(var(--translateX))translateY(var(--translateY))translateZ(var(--translateZ));
+    transition-duration: 1s, 2s, 2s ;
+
+}
+.explore {
+    padding: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-evenly;
+     background-image: url(../images/bgcategories.jpg);
+
+}
+/* .explore:hover{ */
+    /* transform: translateY(-20px); */
+    /* transition: 3s; */
+/* } */
+.explore-info{
+    margin-top: 40px;
+    width: 500px;
+    height: 200px;
+    color: white;
+
+}
+
+
 
 
 
@@ -267,3 +363,6 @@ fieldset{
         width: 100%;
     }
 }
+
+
+
