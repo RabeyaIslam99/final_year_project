@@ -22,6 +22,8 @@
     <section class="food-menu">
         <div class="container">
             <h2 class="text-center">Food Menu</h2>
+            <span id="head"></span>
+
                    <?php 
                    //display the foods that are active
                    $sql = "SELECT * From tbl_food where active='Yes' ";

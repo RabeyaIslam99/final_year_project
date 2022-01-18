@@ -18,6 +18,8 @@
                </div>
                <div class="container">
                <h2 class="text-center">Explore Foods</h2>
+               <span id="head"></span>
+             
              <?php
                  
              //Display all the categories that are active

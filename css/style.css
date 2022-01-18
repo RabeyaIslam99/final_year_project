@@ -80,7 +80,21 @@ a:hover{
     
 
 }
+.btn-kit{
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #ff6b81;
+    color: white;
+    cursor: pointer;
+    padding: 7px 20px;
+}
+.btn-kit:hover{
+    color: #ff4757;
+    background-color: white ;
+    border:  2px solid #ff4757;
 
+}
 
 
 .btn-primary{
@@ -303,6 +317,60 @@ fieldset{
     color: white;
 
 }
+
+.works{
+   
+    position: relative;
+    text-align: center;
+   
+}
+.works img{
+    height: 200px;
+    width: 100%;
+}
+
+.works-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#head{
+    content: "";
+    height: 30px;
+    background: url(../images/headind-border.png);
+    background-repeat: no-repeat;
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: auto;
+    background-position: center;
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

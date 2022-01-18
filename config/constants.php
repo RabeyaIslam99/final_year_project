@@ -1,7 +1,10 @@
 <?php 
 
   //Start session
-  session_start();
+  if(!isset($_SESSION)) { 
+    session_start(); 
+  } 
+
 
    //Creating constants for non Repeating values 
    define('SITEURL','http://localhost/food_order/');

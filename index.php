@@ -2,7 +2,7 @@
 
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search text-center">
-    <div class="containers">
+    <div>
             
 
 
@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="images/bg-1.jpg" class="d-block w-100" alt="...">
+      <img src="images/bgg.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block animate__animated animate__bounceInDown">
       <form action="<?php echo SITEURL;?>food-search.php" method="POST">
                 <input type="search" name="search" placeholder="Search for Food.." required>
@@ -55,14 +55,106 @@
   </button>
 </div>
         <!-- image slider end -->
-
-
-
-      
            
 
         </div>
     </section>
+
+       <!-- How it Works section card start -->
+       <h2 class="text-center">HOW IT WORKS</h2>
+            <span id="head"></span>
+
+       <section class=" container">
+       <div class="row row-cols-1 row-cols-md-3 g-4 ">
+  <div class="col">
+    <div class="card h-100 border border-white  shadow p-3 mb-5 bg-white rounded-3">
+      <img src="images/search.png" class="card-img-top p-4" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-center" >Choose Your Favorite Meals</h5>
+        <p class="card-text text-muted text-center" > 
+        Choose from our wide selection of delicious meal options and add-ons.
+         (We’ve got Express, Kid-Friendly, or Healthy- to name a few.)
+         </p>
+      </div>
+    </div>
+  </div>
+  <div class="col ">
+    <div class="card h-100 border border-white shadow p-3 mb-5 bg-white rounded ">
+      <img src="images/search-2.png" class="card-img-top p-4" alt="...">
+      <div class="card-body">
+      <h5 class="card-title text-center" >We Deliver It To You</h5>
+      <p class="card-text text-muted text-center" > 
+           Choose your favorite meals and order online.
+          Our chef-designed recipes include balanced meals, 
+          quick one-pan dinners, and top-rated dishes with premium kosher ingredients.
+         </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 border border-white shadow p-3 mb-5 bg-white rounded">
+      <img src="images/search-3.png" class="card-img-top p-4" alt="...">
+      <div class="card-body">
+      <h5 class="card-title text-center" >Cook & Enjoy!!!</h5>
+      <p class="card-text text-muted text-center" > 
+      Follow the step-by-step recipe cards to create homey and nourishing dishes to fill up hungry tummies.
+         </p>
+      </div>
+    </div>
+  </div>
+ 
+  </div>
+</div>
+
+
+       </section>
+    
+
+       <!-- How it Works section card start -->
+           <section class="container d-flex align-items-center justify-content-center mt-4">
+           
+             <div>
+               
+               <img class="w-75" src="images/food-kit.png" alt="">
+             </div>
+
+             <div class="mt-4 p-3">
+               <h1>What's Inside in <br> our Kitchen?</h1> <br>
+               <img src="images/fresh-icon.png" alt="">
+               <small class="text-muted">Fresh, pre-portioned produce straight from the farm</small><br><br>
+
+               <img src="images/fridge-icon.png" alt="">
+               <small class="text-muted">Convenient mealkit packages that fit perfectly into your fridge</small> <br><br>
+
+               <img src="images/prep-icon.png" alt="">
+               <small class="text-muted">Perfectly measured dressings & sauces for minimal prep time</small> <br><br>
+
+               <img src="images/hungry-icon.png" alt="">
+               <small class="text-muted">Extra generous amounts so that nobody goes hungry</small><br><br>
+
+               <img src="images/receipe-icon.png" alt="">
+               <small class="text-muted">Easy-to-follow recipe cards ,teenagers also can prepare dinner, too!!!</small> <br>
+                  <a href="" class="btn btn-kit">Explore Now</a>
+                  <img  class="w-50 ms-4" src="images/chili.png" alt="">
+
+             
+               
+             </div>
+            
+           </section>
+           
+
+       <!-- All fresh kit and meal item start -->
+      
+
+
+
+
+
+        <!-- All fresh kit and meal item end -->
+
+     
+
     <!-- fOOD sEARCH Section Ends Here -->
         <?php
         if(isset($_SESSION['order']))
@@ -78,6 +170,8 @@
         <div class="container">
             
             <h2 class="text-center">Explore Foods</h2>
+            <span id="head"></span>
+
 
 
 
@@ -157,7 +251,9 @@
     <!-- fOOD MEnu Section Starts Here -->
     <section class="food-menu">
         <div class="container">
-            <h2 class="text-center">Food Menu</h2>
+            <h2  class="text-center">Food Menu</h2>
+             <span id="head"></span>
+
             
             <?php 
 

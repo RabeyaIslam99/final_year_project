@@ -45,8 +45,11 @@
                     <li>
                         <a href="<?php echo SITEURL; ?>foods.php">Foods</a>
                     </li>
+                     <li>
+                         <a href="<?php echo SITEURL; ?>how-it-works.php">How It Works</a>
+                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="logout.php">logout</a>
                     </li>
                 </ul>
             </div>
