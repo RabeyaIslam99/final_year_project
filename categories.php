@@ -17,7 +17,7 @@
               
                </div>
                <div class="container">
-               <h2 class="text-center">Explore Foods</h2>
+               <h2 class="text-center">Explore Food Category</h2>
                <span id="head"></span>
              
              <?php
@@ -61,7 +61,7 @@
                             //image is available
 
                             ?>
-                           <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name;?>" alt="Momo" class="img-responsive img-curve">
+                           <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name;?>" alt="Momo" height="200px" class="img-responsive img-curve">
 
 
                             <?php

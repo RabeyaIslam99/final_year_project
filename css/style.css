@@ -8,7 +8,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nanum+Gothic:wght@700&family=Oleo+Script&family=Open+Sans:ital,wght@0,700;1,800&family=Patua+One&family=Poppins&family=Roboto&family=Secular+One&family=Vidaloka&display=swap');
 
 /* CSS for All */
-
+html{
+    scroll-behavior: smooth;
+}
 
 *{
     margin: 0 0;

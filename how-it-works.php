@@ -12,8 +12,8 @@
 
 
   
-  <section class="container m-4 p-3  animate__animated  animate__fadeInDownBig">
-      <div class="d-flex  justify-content-center align-items-center ">
+  <section class="container m-4 p-3 ">
+      <div class="d-flex  justify-content-center align-items-center " data-aos="fade-right">
           <div >
          <img class="m-4" src="images/search.png" alt="">
          </div>
@@ -33,8 +33,8 @@
      
   </section>
 
-  <section class="container m-4 p-3 animate__animated animate__fadeInLeft">
-      <div class="d-flex  justify-content-center align-items-center  ">
+  <section class="container m-4 p-3 ">
+      <div class="d-flex  justify-content-center align-items-center " data-aos="fade-left">
         
 
 
@@ -55,7 +55,7 @@
      
   </section>
   <section class="container m-4 p-3 ">
-      <div class="d-flex justify-content-center align-items-center ">
+      <div class="d-flex justify-content-center align-items-center " data-aos="fade-up-right">
           <div  >
          <img class="m-4" src="images/search-3.png" alt="">
          </div>

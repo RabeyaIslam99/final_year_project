@@ -18,6 +18,8 @@
   />
 
 
+      <!-- Scroll animation css -->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
     <!-- Link our CSS file -->
@@ -48,9 +50,29 @@
                      <li>
                          <a href="<?php echo SITEURL; ?>how-it-works.php">How It Works</a>
                      </li>
-                    <li>
-                        <a href="logout.php">logout</a>
+                     <?php $user = ($_SESSION); 
+                    if(empty($user)) {
+                    ?>
+                    <li >
+                        <a  href="login.php">Login</a>
                     </li>
+                    <li >
+                        <a href="register.php">Register</a>
+                    </li>
+                    <?php } else {?>
+                    <li >
+                        <a href="#" >
+                            <?php echo htmlspecialchars($_SESSION["username"]); ?>
+                        </a>
+     
+                    </li>
+                    <li>
+                    
+                        <a  href="logout.php">Logout</a>
+                    
+                    </li>
+            
+                    <?php } ?>
                 </ul>
             </div>
 

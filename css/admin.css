@@ -1,324 +1,142 @@
-/*
-    Author:Rabeya Islam;
-    Theme: Food order website ;
-    Version: 1.0;
-*/
-*{
-   margin: 0;
-   padding: 0;
-   font-family: Arial, Helvetica, sans-serif;
-
-}
-.wrapper{
-    
-    padding:  3% ;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .wrapper {
+    padding: 1%;
     width: 80%;
     margin: 0 auto;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-
-
-   
+  }
   
-}
-
-    
-
-
-
-.text-center{
+  .text-center {
     text-align: center;
-    color: black;
-   
-
-}
-.clearfix{
+  }
+  
+  .clearfix {
     float: none;
     clear: both;
-}
-.tbl-full{
-    width: 80%;
-    
-    border: ridge;
-    
-    margin: 0%;
-    
-}
-
-.tbl-30{
+  }
   
-    width: 70%;
-    height: 20%;
-    margin: 0%;
-    border: ridge;
+  .tbl-full {
+    width: 100%;
+  }
+  .tbl-30 {
+    width: 30%;
+  }
   
-    font-size: medium;
-    
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
   
+  th,
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
   
-}
-
-table tr th{
-    border-bottom: 2px  double white;
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  table tr th {
+    border-bottom: 1px solid black;
     padding: 1%;
-    text-align: center;
+    text-align: left;
+  }
+  
+  table tr td {
+    padding: 1%;
+  }
+  
+  .btn-primary {
+    background-color: #1e90ff;
+    padding: 1%;
     color: white;
-
-    
-}
-table tr td{
-    padding: 1%;
-    font-weight: bold;
-    color: blanchedalmond;
-
-
-}
-.btn-primary{
-    background-color:pink;
-    padding: 1%;
-    color: black;
     text-decoration: none;
     font-weight: bold;
-   
-    
-
-
-}
-.btn-primary:hover{
-
-    background-color: #FF7777;
-}
-#add_more{
-    background-color:#22a6b3;
-    padding: 1%;
-    color:black;
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    
-   
+  }
+  .btn-primary:hover {
+    background-color: #3742fa;
+  }
   
-    
-
-}
-.btn-secondary{
+  .btn-secondary {
     background-color: #7bed9f;
     padding: 1%;
     color: black;
     text-decoration: none;
     font-weight: bold;
-    font-size: medium;
-    
-    
+  }
+  .btn-secondary:hover {
+    background-color: #2ed573;
+  }
   
-    
-     
-
-}
-.btn-secondary:hover{
-
-    background-color:#2ed573;
-    
-
-    
-}
-.btn-danger{
-    background-color:  #ef5777;
+  .btn-danger {
+    background-color: #ff6b81;
     padding: 1%;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    
-  
-    
-
-
-}
-.btn-danger:hover{
-
-    background-color:#ff6348;
-}
-
-.success{
-   color:#10ac84;
-   font-weight: bold;
-
-
-}
-.error{
-    color: #ff6348;
-    
-     text-align: center;
-    margin-bottom: 50px;
-}
-.true{
-    color: #2ed573;
-}
-.false{
-    color: red;
-
-}
-
-
-/*Css for menu*/
-.menu{
-  
-    background:#B53471;
-    box-shadow: 2px 2px 5px #B53471 ;
-  
-}
-.menu ul{
-    list-style-type: none;
-  
-}
-.menu ul li{
-    display: inline;
-    padding: 2%;
- 
-    
-    
-}
-.menu ul li a{
-    text-decoration: none;
-    font-weight: bold;
     color: white;
-   
-
-}
-.menu ul li a:hover{
-
- color:steelblue;
-
-}
-/* Css for main content */
-.main-content{
-
-
-    background-color: #dfe4ea;
-    padding: 2% 0;
-    background: linear-gradient(rgba(0,0,0,0.12),#eb74ab),url(../images/bc.jpg);
-    height: 150vh;
-    background-size: cover;
-
-}
-.col-4{
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .btn-danger:hover {
+    background-color: #5d9e5f;
+  }
+  
+  .success {
+    color: #2ed573;
+  }
+  .error {
+    color: #5d9e5f;
+  }
+  
+  /* CSS for Menu */
+  .menu {
+    border-bottom: 1px solid grey;
+  }
+  .menu ul {
+    list-style-type: none;
+  }
+  .menu ul li {
+    display: inline;
+    padding: 1%;
+  }
+  .menu ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #5d9e5f;
+  }
+  .menu ul li a:hover {
+    color: #5d9e5f;
+  }
+  
+  /* CSS for main-content */
+  .main-content {
+    background-color: #f1f2f6;
+    padding: 3% 0;
+  }
+  
+  .col-4 {
     width: 18%;
-    background-color:green;
+    background-color: white;
     margin: 1%;
     padding: 2%;
     float: left;
-    color: black;
-
-
-}
-
-/* Css for footer*/
-
-.footer{
-
-background: #ff4757;
-color: white;
-
-}
-#cng-pass
-{
-    background-color: #e17055;
-    padding: 1%;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: medium;
+  }
+  
+  /* CSS for Footer */
+  .footer {
+    background-color: #5d9e5f;
     color: white;
-}
-#cng-pass:hover{
-  background-color: #ff7675;
-}
-
-
-
-/*css for login */
-.log{
-    margin: 0;
-    background: linear-gradient(rgba(0,0,0,0.1),#eb74ab),url(../images/bc.jpg);
-    height: 150vh;
-    background-size: cover;
-    padding: 2% 0;
-
-
-}
-
-
-
-
-
-.login-box{
-    
-    border: 1px solid gray;
-    width: 360px;
-    height: 440px;
+  }
+  
+  /* CSS for Login */
+  .login {
+    border: 1px solid grey;
+    width: 20%;
     margin: 10% auto;
-    padding: 6% auto;
-    border-radius: 15px;
-    background-color: white;
-    
-   
-}
-#tgl-login{
-
-    padding: 10px 30px;
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-    outline: none;
-    position: relative;
-    font-weight: bold;
-
-   
-    width: 220px;
-    margin: 35px auto;
-    position: relative;
-    box-shadow: 0 0 20px 9px #ff61241f;
-    border-radius: 30px;
-
-}
-.input-group{
-
-    top: 270px;
-    position: absolute;
-    width: 280px;
-    margin-top: 50px;
-    transition: .5s;
     padding: 2%;
-
-}
-.input-field{
-
-    width: 100%;
-    padding: 10px 0;
-    margin: 5px 0;
-    border-left: 0;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 1px solid #999;
-    outline: none;
-    background: transparent;
-}
-.submit-btn{
-    
-    width: 60%;
-    padding: 15px 0;
-    cursor: pointer;
-    display: block;
-    margin: 40px auto;
-    background: linear-gradient(to right,#ffccdd,#ff99bb);
-    border: 0;
-    outline: none;
-    border-radius: 20px;
-    font-weight: bold;
-    text-align: center;
-}
-.card-text{
-    
-    background-color: cadetblue;
-}
+  }
+  
