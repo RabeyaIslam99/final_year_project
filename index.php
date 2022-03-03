@@ -18,7 +18,7 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="images/back.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block  animate__animated animate__bounceInDown">
+      <div class="carousel-caption d-none d-md-block ">
        
       <form action="<?php echo SITEURL;?>food-search.php" method="POST">
                 <input type="search" name="search" placeholder="Search for Food.." required>
@@ -28,7 +28,7 @@
     </div>
     <div class="carousel-item">
       <img src="images/bgg.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block animate__animated animate__bounceInDown">
+      <div class="carousel-caption d-none d-md-block">
       <form action="<?php echo SITEURL;?>food-search.php" method="POST">
                 <input type="search" name="search" placeholder="Search for Food.." required>
                 <input type="submit" name="submit" value="Search" class="btn-search">
@@ -37,7 +37,7 @@
     </div>
     <div class="carousel-item">
       <img src="images/bg--2.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block  animate__animated animate__bounceInDown">
+      <div class="carousel-caption d-none d-md-block">
       <form action="<?php echo SITEURL;?>food-search.php" method="POST">
                 <input type="search" name="search" placeholder="Search for Food.." required>
                 <input type="submit" name="submit" value="Search" class="btn-search" >
@@ -177,7 +177,7 @@
 
             <?php 
             //Create  SQL Query to display categories from database
-            $sql = "SELECT * FROM tbl_category where active='Yes' and featured='Yes' LIMIT 5";//using limit we can display the category in our front page and we can also manage the category
+            $sql = "SELECT * FROM tbl_category where active='Yes' and featured='Yes' LIMIT 3";//using limit we can display the category in our front page and we can also manage the category
             //Execute the Query 
             $res = mysqli_query($conn, $sql);
             //count rows to check whether the categoey is available or not
@@ -259,7 +259,7 @@
 
             //getting food from databse that are active and featured
             //SQL query 
-            $sql2 = "SELECT * FROM  tbl_food Where active='Yes' and featured='Yes' " ;
+            $sql2 = "SELECT * FROM  tbl_food Where active='Yes' and featured='Yes' Limit 3" ;
               //Execute the query 
               $res2 = mysqli_query($conn, $sql2);
 
@@ -317,7 +317,7 @@
                         </p>
                        <br>
 
-                       <a href="<?php echo SITEURL ; ?>order.php?food_id=<?php echo $id;?>" class="btn btn-primary">Order Now</a>
+                       <a href="<?php echo SITEURL ; ?>order.php?food_id=<?php echo $id;?>" class="btn btn-primary " >Order Now</a>
                    </div>
               </div>
 
@@ -358,6 +358,11 @@
             <a href="#">See All Foods</a>
         </p>
     </section>
+
+
+     <!-- Review Slide section added -->
+     
+    <?php include('showreview.php'); ?>
     <!-- fOOD Menu Section Ends Here -->
 
     <?php include('partials-font/footer.php'); ?>

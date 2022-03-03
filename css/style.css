@@ -105,6 +105,7 @@ a:hover{
     cursor: pointer;
    
 }
+
 .btn-primary:hover{
     color: #ff4757;
     background-color: white ;
@@ -169,21 +170,37 @@ fieldset{
 
 /* CSS for Food SEarch Section */
 
-.food-search{
-    /* background-image: url(../images/bg-1.jpg); */
+.food-search {
+    /* background-image: url(../images/bgg.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding: 7% 0;
-}
-
-.food-search input[type="search"]{
+  }
+  
+  .food-search input[type="search"] {
     width: 50%;
     padding: 1%;
     font-size: 1rem;
     border: none;
     border-radius: 5px;
-}
+  }
+  
+  .food-search2 {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7% 0;
+  }
+  
+  .food-search2 input[type="search"] {
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+  }
 
 
 /* CSS for Categories */
