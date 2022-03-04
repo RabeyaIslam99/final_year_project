@@ -43,7 +43,7 @@
     <br>
     <tr>
             <td colspan="2">
-                <input type="submit" name="submit" value="Add admin" class="btn-secondary">
+                <input type="submit" name="submit" value="Add admin" class="btn btn-success">
 
             </td>
         </tr>

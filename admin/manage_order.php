@@ -7,7 +7,7 @@
      </br> </br> 
     <!--Button to add Admin-->
 
-    <a href="#" id="add_more" > Add More Order</a>
+    <a href="#" id="add_more" class="btn btn-success"> Add More Order</a>
 </br> </br> </br> </br>
 
            <?php
@@ -111,7 +111,7 @@
                         <td><?php echo  $customer_address ;?></td>
                         
                         <td>
-                            <a href="<?php echo SITEURL;?>admin/update_order.php?id=<?php echo $id;?>" class="btn-secondary">Update order</a>
+                            <a href="<?php echo SITEURL;?>admin/update_order.php?id=<?php echo $id;?>" class="btn btn-secondary">Update order</a>
                             
                         </td>
                         </tr>

@@ -7,7 +7,7 @@
      </br> </br> 
     <!--Button to add Admin-->
 
-    <a href="<?php echo SITEURL;?>admin/add_food.php" id="add_more" > Add More Food </a>
+    <a href="<?php echo SITEURL;?>admin/add_food.php" id="add_more"  class="btn btn-success"> Add More Food </a>
 </br> </br> </br> </br>
       
       
@@ -126,8 +126,8 @@
            <td><?php echo $featured; ?></td>
           <td><?php echo $active; ?></td>
           <td>
-            <a href="<?php echo SITEURL;?>admin/update_food.php?id=<?php echo $id; ?>" class="btn-secondary">Update food</a>
-            <a href="<?php echo SITEURL;?>admin/delete_food.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn-danger">Delete food</a>
+            <a href="<?php echo SITEURL;?>admin/update_food.php?id=<?php echo $id; ?>" class="btn btn-secondary">Update food</a>
+            <a href="<?php echo SITEURL;?>admin/delete_food.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn btn-danger">Delete food</a>
 
           </td>
        </tr>

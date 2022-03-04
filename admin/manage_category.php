@@ -63,7 +63,7 @@
 
       <!--Button to add Admin-->
 
-      <a href="<?php  echo SITEURL; ?>admin/add_category.php" id="add_more"> Add more Category </a>
+      <a href="<?php  echo SITEURL; ?>admin/add_category.php" id="add_more" class="btn btn-success"> Add more Category </a>
     </br> </br> </br> </br>
        <table class="table">
        <tr>
@@ -144,8 +144,8 @@
                         <td><?php echo $active?></td>
        
                          <td>
-                             <a href="<?php  echo SITEURL;?>admin/update_category.php?id=<?php echo $id;?>" class="btn-secondary">Update Category</a>
-                             <a href="<?php echo SITEURL; ?>admin/delete_category.php?id=<?php echo $id;?>&image_name=<?php echo $image_name; ?>" class="btn-danger">Delete Category</a>
+                             <a href="<?php  echo SITEURL;?>admin/update_category.php?id=<?php echo $id;?>" class="btn btn-secondary">Update Category</a>
+                             <a href="<?php echo SITEURL; ?>admin/delete_category.php?id=<?php echo $id;?>&image_name=<?php echo $image_name; ?>" class="btn btn-danger">Delete Category</a>
 
                            </td>
                    </tr>

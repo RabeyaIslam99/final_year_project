@@ -43,7 +43,7 @@
         </br></br>
       <!--Button to add Admin-->
 
-         <a href="add_admin.php"  id="add_more"> Add more admin</a>
+         <a href="add_admin.php"  id="add_more" class="btn btn-success"> Add more admin</a>
       </br> </br> </br> </br>
         
    
@@ -91,9 +91,9 @@
                         <td><?php echo $full_name; ?></td>
                         <td><?php echo $username; ?></td>
                        <td>
-                        <a href="<?php echo SITEURL; ?>admin/update_password.php?id=<?php echo $id; ?>"class=" btn-primary">ChangePassword</a>
-                        <a href="<?php echo SITEURL; ?>admin/update_admin.php?id=<?php echo $id; ?>"class="btn-secondary">Update</a>
-                        <a href="<?php echo SITEURL; ?>admin/delete_admin.php?id=<?php echo $id; ?>"class=" btn-danger">Delete</a>
+                        <a href="<?php echo SITEURL; ?>admin/update_password.php?id=<?php echo $id; ?>"class="btn btn-primary">ChangePassword</a>
+                        <a href="<?php echo SITEURL; ?>admin/update_admin.php?id=<?php echo $id; ?>"class="btn btn-secondary">Update</a>
+                        <a href="<?php echo SITEURL; ?>admin/delete_admin.php?id=<?php echo $id; ?>"class=" btn btn-danger">Delete</a>
                        </td>
                     </tr
  

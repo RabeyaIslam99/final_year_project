@@ -243,6 +243,10 @@
             <div class="clearfix"></div>
           
         </div>
+
+        <p class="text-center">
+            <a href="categories.php">See All Categories</a>
+        </p>
        
         
     </section>
@@ -355,14 +359,38 @@
         </div>
 
         <p class="text-center">
-            <a href="#">See All Foods</a>
+            <a href="foods.php">See All Foods</a>
         </p>
     </section>
 
 
      <!-- Review Slide section added -->
      
-    <?php include('showreview.php'); ?>
+   
     <!-- fOOD Menu Section Ends Here -->
+
+
+    <!-- contact us form start here -->
+
+    <section class="text-center mb-4 " >
+    <div class="container "  style=" width:600px; height: 50px; margin-bottom:200px; margin-top:50px;">
+     <h1 >Get The Latest Meals</h1>
+     <p >And receive $20 coupon for first order</p>
+     <div class="input-group " >
+  <input type="text" class="form-control" placeholder=" username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <span class="  btn-primary p-4" id="basic-addon2">Subscribe Us</span>
+</div> <br> <br>
+     
+
+     <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" > 
+    <label class="form-check-label" for="exampleCheck1">Enim quis fugiat consequat elit minim nisi eu occaecat occaecat deserunt aliquip nisi ex deserunt.</label>
+  </div>
+  </div>  <br> <br>
+    </section>
+    
+
+    <!-- contact us form end here -->
+
 
     <?php include('partials-font/footer.php'); ?>

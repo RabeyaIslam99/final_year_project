@@ -3,7 +3,7 @@
 <div class="main-content">
          <div class="wrapper">
            
-            <h2>Add more food</h2>
+            <h2 class="btn btn-success">Add more food</h2>
             <br><br>
 
 
@@ -136,7 +136,7 @@
 
                <tr> 
                        <td colspan="2">
-                           <input type="submit" name="submit" value="Add food" class="btn-primary" >
+                           <input type="submit" name="submit" value="Add food" class="btn btn-success" >
 
                        </td>
 

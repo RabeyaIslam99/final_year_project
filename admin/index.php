@@ -4,7 +4,7 @@
 <!-- Main Content Section Starts -->
 <div class="main-content">
     <div class="wrapper">
-        <h1>Administrator Dashboard</h1>
+        <h1 class="text-center text-success">Administrator Dashboard</h1>
         <br><br>
         <?php 
             if(isset($_SESSION['login']))
@@ -15,7 +15,7 @@
         ?>
         <br><br>
 
-        <div class="col-4 text-center">
+        <div class="col-4 text-center shadow-lg rounded-2">
 
             <?php 
                 //Sql Query 
@@ -31,7 +31,7 @@
             Food Categories
         </div>
 
-        <div class="col-4 text-center">
+        <div class="col-4 text-center shadow-lg rounded-2">
 
             <?php 
                 //Sql Query 
@@ -47,7 +47,7 @@
             Foods
         </div>
 
-        <div class="col-4 text-center">
+        <div class="col-4 text-center shadow-lg rounded-2">
             
             <?php 
                 //Sql Query 
@@ -63,7 +63,7 @@
             Total Orders
         </div>
 
-        <div class="col-4 text-center">
+        <div class="col-4 text-center shadow-lg rounded-2">
             
             <?php 
                 //Creat SQL Query to Get Total Revenue Generated
@@ -86,7 +86,7 @@
             Revenue Generated
         </div>
 
-        <div class="col-4 text-center">
+        <div class="col-4 text-center shadow-lg rounded-2">
             
             <?php 
                 //Sql Query 
@@ -102,7 +102,7 @@
             Pending Orders
         </div>
 
-        <div class="col-4 text-center">
+        <div class="col-4 text-center shadow-lg rounded-2">
             
             <?php 
                 //Sql Query 
@@ -119,7 +119,7 @@
         </div>
 
 
-        <div class="col-4 text-center">
+        <div class="col-4 text-center shadow-lg rounded-2">
             
             <?php 
                 //Sql Query 
@@ -136,7 +136,7 @@
         </div>
 
 
-        <div class="col-4 text-center">
+        <div class="col-4 text-center shadow-lg rounded-2">
             
             <?php 
                 //Sql Query 
@@ -148,14 +148,22 @@
             ?>
 
             <h1><?php echo $count8; ?></h1>
-            <br />
+           
             System Administrator
         </div>
 
         <div class="clearfix"></div>
 
     </div>
+
+  <!-- Bar section -->
+ 
+  <?php include('bar.php'); ?>
 </div>
+
+
+
+ 
 <!-- Main Content Setion Ends -->
 
 <?php include('partials/footer.php') ?>

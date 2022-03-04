@@ -3,7 +3,7 @@
 
     <div class="main-content">
          <div class="wrapper">
-         <h1>Add Category</h1>
+         <h1 >Add Category</h1>
 
          </br> </br>
            

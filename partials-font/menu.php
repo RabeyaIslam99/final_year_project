@@ -65,11 +65,7 @@
                     <a href="myorder.php">My order</a>
                 
                 </li>
-                <li>
-                    
-                        <a  href="<?php echo SITEURL; ?>givereviews.php?user_name=<?php echo htmlspecialchars($_SESSION["username"]); ?>">review</a>
-                    
-                    </li>
+                
                     <li >
                         <a href="#" >
                             <?php echo htmlspecialchars($_SESSION["username"]); ?>
