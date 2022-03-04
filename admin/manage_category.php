@@ -1,4 +1,12 @@
-<?php include('partials/menu.php');?>
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark "  >
+<?php include('partials/menu.php'); ?>
+</div>
+        </div>
+        <div class="col py-3" style="float: left;
+        width: 71%
+">
 
 <div class="main-content">
     
@@ -186,4 +194,6 @@
 
 
 </div>
-<?php //include('partials/footer.php');?>
+</div>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 
 
 <?php
-         $sql ="SELECT food, COUNT(*) as `count` FROM tbl_order GROUP BY food;";
+         $sql ="SELECT food, COUNT(*) as `count` FROM tbl_order GROUP BY food ORDER BY COUNT DESC;";
          
       
          $result = mysqli_query($conn,$sql);
@@ -19,7 +19,7 @@
  
 ?>
 
-<div style="margin-left: 22%">
+<div style="margin-left: 22%; margin-top:70px;">
      <div style="width:70%;hieght:40%;text-align:center">
             <h2 class="page-header text-success"> Order Analytics Reports </h2>
             <div>Product </div>
