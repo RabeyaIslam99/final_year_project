@@ -47,37 +47,37 @@
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start mt-5" id="menu">
                     <li class="nav-item">
                         <a href="index.php" class="nav-link align-middle px-0">
-                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">DashBoard</span>
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline text-white">DashBoard</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="manage_category.php" class="nav-link align-middle px-0">
-                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage Category</span>
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline text-white">Manage Category</span>
                         </a>
                     </li>
                     
                     <li class="nav-item">
                         <a href="manage_food.php" class="nav-link align-middle px-0">
-                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manege Food</span>
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline text-white">Manege Food</span>
                         </a>
                     </li>
                     
                     <li class="nav-item">
                         <a href="manage_order.php" class="nav-link align-middle px-0">
-                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage Order</span>
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline text-white">Manage Order</span>
                         </a>
                     </li>
                     
                     <li class="nav-item">
                         <a href="manage_admin.php" class="nav-link align-middle px-0">
-                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage admin</span>
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline text-white">Manage admin</span>
                         </a>
                     </li>
                     
                     
                     <li style="margin-top:300px;">
                         <a href="logout.php" class="nav-link px-0 align-middle " >
-                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Log Out
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline text-dark btn btn-light">Log Out
 </span> </a>
                     </li>
                   

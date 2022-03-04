@@ -22,7 +22,7 @@
 <div style="margin-left: 22%; margin-top:70px;">
      <div style="width:70%;hieght:40%;text-align:center">
             <h2 class="page-header text-success"> Order Analytics Reports </h2>
-            <div>Product </div>
+            <div>FOODS </div>
             <canvas  id="chartjs_bar"></canvas> 
         </div>    
 
