@@ -50,9 +50,11 @@
                      <li>
                          <a href="<?php echo SITEURL; ?>how-it-works.php">How It Works</a>
                      </li>
+                     
                      <?php $user = ($_SESSION); 
                     if(empty($user)) {
                     ?>
+                  
                     <li >
                         <a  href="login.php">Login</a>
                     </li>
@@ -65,6 +67,9 @@
                     <a href="myorder.php">My order</a>
                 
                 </li>
+                <li >
+                        <a  href="contactus.php">Contact Us</a>
+                    </li>
                 
                     <li >
                         <a href="#" >
@@ -88,3 +93,4 @@
         </div>
     </section>
     <!-- Navbar Section Ends Here -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

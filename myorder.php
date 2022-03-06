@@ -13,15 +13,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 ?>
 
 <div class="main-content">
-    <div class="container">
-        <h1 class="text-center">My order</h1>
+    <div class="container" style="margin-bottom:60px;">
+        <h1 class="text-center">My order</h1> <br> 
+        <span id="head"></span>
 
                 <br /><br /><br />
 
     
                 <br><br>
 
-                <table class="tbl-full">
+                <table class="tbl-full"  >
                     <tr>
                         <th width="5%">#</th>
                         <th width="10%">Order Date</th>
@@ -120,4 +121,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     
 </div>
 
-<?php include('partials-font/footer.php'); ?>
+        <div style="margin-top:200px;" >
+        <?php include('partials-font/footer.php'); ?> 
+        </div>

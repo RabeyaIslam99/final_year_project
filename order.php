@@ -48,18 +48,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             header('location:'.SITEURL);
         }
     ?>
-<a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
+<!-- <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a> -->
 
 
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search2">
         <div class="container">
             
-            <h2 class="text-center text-white">Fill this form to confirm your order.</h2>
+            <h2 class="text-center text-white pt-4">Fill this form to confirm your order.</h2>
 
-            <form action="" method="POST" class="order">
+            <form action="" method="POST" class="order text-white p-2">
                 <fieldset>
-                    <legend>Selected Food</legend>
+                    <legend >Selected Food</legend>
 
                     <div class="food-menu-img">
                         <?php 
@@ -103,16 +103,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
      
                   
-                    <input type="text" readonly='readonly' name="full-name" value="<?php echo htmlspecialchars($_SESSION["username"]); ?>" placeholder="E.g. William Moore" class="input-responsive" required>
+                    <input type="text" readonly='readonly' name="full-name" value="<?php echo htmlspecialchars($_SESSION["username"]); ?>" class="input-responsive" required>
                     
                     <div class="order-label">Phone Number</div>
-                    <input type="tel" name="contact" placeholder="E.g. 7410000000" class="input-responsive" required>
+                    <input type="tel" name="contact" class="input-responsive" required>
 
                     <div class="order-label">Email</div>
-                    <input type="email" name="email" placeholder="E.g. william@codeastro.com" class="input-responsive" required>
+                    <input type="email" name="email"  class="input-responsive" required>
 
                     <div class="order-label">Address</div>
-                    <textarea name="address" rows="10" placeholder="E.g. Street, City, Country" class="input-responsive" required></textarea>
+                    <textarea name="address" rows="3"  class="input-responsive" required></textarea>
 
                     <input type="submit" name="submit" value="Confirm Order" class="btn btn-primary">
                 </fieldset>
@@ -184,4 +184,26 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </section>
     <!-- fOOD sEARCH Section Ends Here -->
 
-    <?php include('partials-font/footer.php'); ?>
+
+
+    <!-- Subscribe us -->
+    <section class="text-center mb-4 " >
+    <div class="container "  style=" width:600px; height: 50px; margin-bottom:200px; margin-top:50px;">
+     <h1 >Get The Latest Meals</h1>
+     <p >And receive $20 coupon for first order</p>
+     <div class="input-group " >
+  <input type="text" class="form-control" placeholder=" username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <span class="  btn-primary p-4" id="basic-addon2">Subscribe Us</span>
+</div> <br> <br>
+     
+
+     <div class="mb-3 form-check text-left">
+    <input type="checkbox" class="form-check-input" > 
+    <label class="form-check-label" for="exampleCheck1">Subscribe us for get the latest update.</label>
+  </div>
+  </div>  <br> <br>
+    </section>
+
+    <div style="margin-top:200px;" >
+        <?php include('partials-font/footer.php'); ?> 
+        </div>
