@@ -175,7 +175,7 @@ fieldset{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 7% 0;
+    
   }
   
   .food-search input[type="search"] {
@@ -191,7 +191,7 @@ fieldset{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 7% 0;
+   
   }
   
   .food-search2 input[type="search"] {
@@ -204,14 +204,15 @@ fieldset{
 
 
 /* CSS for Categories */
-.categories{
+/* .categories{
     padding: 4% 0;
-}
+} */
 
 .box-3{
     width: 28%;
     float: left;
     margin: 2%;
+    
    
 }
 .box-3:hover img{
@@ -224,6 +225,8 @@ fieldset{
 .food-menu{
     background-color: #ececec;
     padding: 4% 0;
+   
+    
 }
 .food-menu-box{
     width: 30%;

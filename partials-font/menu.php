@@ -29,14 +29,14 @@
 <body>
     <!-- Navbar Section Starts Here -->
     <section class="navbar">
-        <div class="containers">
+        <div class="containers mb-0">
             <div class="logo">
                 <a href="#" title="Logo">
                     <img src="images/logo-2.png" alt="Restaurant Logo" class="img-responsive">
                 </a>
             </div>
 
-            <div class="menu text-right">
+            <div class="menu text-right mt-4">
                 <ul>
                     <li>
                         <a href="<?php echo SITEURL; ?>">Home</a>

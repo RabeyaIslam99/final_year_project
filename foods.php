@@ -2,7 +2,7 @@
 
 
     <!-- fOOD sEARCH Section Starts Here -->
-    <section class="food-search text-center" style="background-image: url(images/back.jpg)">
+    <section class="food-search text-center" style="background-image: url(images/back.jpg); padding:100px;">
         <div class="container " >
             
             <form action="<?php echo SITEURL;?>food-search.php" method="POST">
@@ -21,6 +21,9 @@
     <!-- fOOD MEnu Section Starts Here -->
     <section class="food-menu">
         <div class="container">
+
+        <h2 class="text-center">Explore Food Menu</h2>
+               <span id="head"></span>
             <!-- <h2 class="text-center">Food Menu</h2>
             <span id="head"></span> -->
 
@@ -48,8 +51,8 @@
                            ?>
                              
 
-                              
-                      <div class="food-menu-box animate__animated animate__fadeInLeftBig mb-3">
+                             <div>
+                      <div class="food-menu-box  animate__animated animate__fadeInLeftBig mb-3">
                          <div class="food-menu-img">
                              <?php 
                              //check whether image is available or not
@@ -94,12 +97,30 @@
                    ?>
 
     
-            
+</div> 
 
         </div>
         <div class="clearfix"></div>
 
     </section>
     <!-- fOOD Menu Section Ends Here -->
+
+     <!-- Subscribe us -->
+     <section class="text-center mb-4 " >
+    <div class="container "  style=" width:600px; height: 50px; margin-bottom:200px; margin-top:50px;">
+     <h1 >Get The Latest Meals</h1>
+     <p >And receive $20 coupon for first order</p>
+     <div class="input-group " >
+  <input type="text" class="form-control" placeholder=" username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <span class="  btn-primary p-4" id="basic-addon2">Subscribe Us</span>
+</div> <br> <br>
+     
+
+     <div class="mb-3 form-check text-left">
+    <input type="checkbox" class="form-check-input" > 
+    <label class="form-check-label" for="exampleCheck1">Subscribe us for get the latest update.</label>
+  </div>
+  </div>  <br> <br>
+    </section>
 
     <?php include('partials-font/footer.php'); ?>

@@ -29,13 +29,13 @@
 ?>
 
     <!-- fOOD sEARCH Section Starts Here -->
-    <section class="food-search text-center">
+    <section class="food-search2 text-center ">
         <div class="container">
             
             <h2>Foods on <a href="#" class="text-white">"<?php echo $category_title;?>"</a></h2>
 
         </div>
-    </section>
+</section>
     <!-- fOOD sEARCH Section Ends Here -->
 
 
@@ -126,6 +126,7 @@
         </div>
 
     </section>
+   
     <!-- fOOD Menu Section Ends Here -->
 
     
