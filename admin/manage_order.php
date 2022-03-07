@@ -5,18 +5,18 @@
 </div>
         </div>
         <div class="col py-3" style="float: left;
-        width: 71%; height:655px; overflow-x: hidden;
+        width: 71%; height:655px; overflow-y:scroll ;
 ">
 
 <div class="main-content">
 
-  <div class="wrapper">
+  <div >
      <h1>Manage Order</h1>
      </br> </br> 
     <!--Button to add Admin-->
 
-    <a href="#" id="add_more" class="btn btn-success"> Add More Order</a>
-</br> </br> </br> </br>
+    <!-- <a href="#" id="add_more" class="btn btn-success"> Add More Order</a> -->
+</br> 
 
            <?php
            

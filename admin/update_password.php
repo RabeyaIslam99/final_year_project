@@ -5,7 +5,7 @@
 </div>
         </div>
         <div class="col py-3" style="float: left;
-        width: 71%; height:655px; overflow-x: hidden;
+        width: 71%; height:655px; overflow-y:scroll ;
 ">
 <div class="main-content">
     <div class="wrapper">
@@ -30,7 +30,7 @@
                 </tr> 
 
                 <tr>
-                    <td>New password :</td>
+                    <td>New password : </td> <br>
                         <td>
                             <input type="password"name="new_password"placeholder="new_password">
 
@@ -53,7 +53,7 @@
                
                <td colspan="2">
                  <input type="hidden" name="id" value="<?php echo $id;?>">
-                 <input type="submit" name="submit" value="Change password" id="cng-pass">
+                 <input type="submit" name="submit" value="Change password" id="cng-pass" class="btn btn-success">
                </td>
                
            </tr> 

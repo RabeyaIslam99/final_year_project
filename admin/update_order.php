@@ -5,7 +5,7 @@
 </div>
         </div>
         <div class="col py-3" style="float: left;
-        width: 71%; height:655px; overflow-x: hidden;
+        width: 71%; height:655px; overflow-y:scroll ;
 ">
 <div class="main-content">
     <div class="wrapper">
@@ -84,14 +84,14 @@
                         </tr> 
 
                         <tr> 
-                     <td>Quantity :</td>
+                     <td>Quantity:</td>
                             <td>
                                 <input type="number" name="qty" value="<?php echo $qty;?>">
                             </td>
                         </tr> 
 
                         <tr> 
-                     <td>Status :</td>
+                     <td>Status:  </td>
                             <td>
                                 <select name="status">
                                     <option <?php if($status=="ordered"){echo "selected";}?> value="ordered">Ordered</option>
@@ -104,14 +104,14 @@
                          
 
                         <tr>
-                        <td>Customer name :</td>
+                        <td>Customer name:   </td>
                             <td>
                             <input type="text" name="customer_name" value="<?php echo $customer_name;?>">
                             </td>
                         </tr> 
 
                         <tr>
-                        <td>Customer contact:</td>
+                        <td>Customer contact:  </td>
                             <td>
                             <input type="text" name="customer_contact" value="<?php echo $customer_contact;?>">
                             </td>
@@ -119,14 +119,14 @@
 
                          
                         <tr>
-                        <td>Customer email :</td>
+                        <td>Customer email: </td>
                             <td>
                             <input type="text" name="customer_email" value="<?php echo $customer_email;?>">
                             </td>
                         </tr> 
 
                         <tr>
-                        <td>Customer address :</td>
+                        <td>Customer address: </td>
                             <td>
                            <textarea  name="customer_address" cols="20" rows="5"><?php echo $customer_address;?></textarea>
                             </td>
@@ -138,7 +138,7 @@
                             <td colspan="2">
                                 <input type="hidden" name="id" value="<?php echo $id;?>">
                                 <input type="hidden" name="price" value="<?php echo $price;?>">
-                                <input type="submit" name="submit" value="Update order" class="btn-secondary">
+                                <input type="submit" name="submit" value="Update order" class="btn btn-success">
                             </td>
                         </tr> 
 

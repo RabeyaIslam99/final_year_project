@@ -11,7 +11,7 @@
 <div class="main-content">
          <div class="wrapper">
            
-            <h2 class="btn btn-success">Add more food</h2>
+            <h2 >Add food</h2>
             <br><br>
 
 

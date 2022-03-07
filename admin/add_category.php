@@ -5,7 +5,7 @@
 </div>
         </div>
         <div class="col py-3" style="float: left;
-        width: 71%
+        width: 71%; height:655px; overflow-x: hidden;
 ">
 
     <div class="main-content">
@@ -77,7 +77,7 @@
 
                     <tr> 
                        <td colspan="2">
-                           <input type="submit" name="submit" value="Add category" class="btn-primary" >
+                           <input type="submit" name="submit" value="Add category" class=" btn btn-success" >
 
                        </td>
 

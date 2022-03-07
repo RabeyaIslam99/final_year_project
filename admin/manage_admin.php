@@ -5,7 +5,7 @@
 </div>
         </div>
         <div class="col py-3" style="float: left;
-        width: 71%
+           width: 71%; height:655px; overflow-y:scroll ;
 ">
    
     <!--Main content  section starts -->
