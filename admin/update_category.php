@@ -72,7 +72,7 @@
              
 
              <form action="" method="POST" enctype="multipart/form-data">
-                <table class="tbl-30"> 
+                <table class="tbl-40"> 
                     <tr>
                        <td> Title : </td>
                        <td>
@@ -82,7 +82,10 @@
                     </tr>
 
                             <tr>
-                               <td>Current Image:</td>
+                               <td>
+                                  Current Image:
+
+                               </td>
                               <td>
                                   <?php 
                                  if($current_image!="")
@@ -108,16 +111,18 @@
 
                              <tr>
 
-                                <td>Add new Image:</td>
+                                <td>New Image: </td>
                                 <td>
                                    <input type="file" name="image">
                             
                                 </td>
                             </tr>
                             <tr>
-                             <td> Featured : </td>
+                                   <td>
+                                   Featured:  <br> 
+                                    </td>
                                <td>
-                                   <input <?php if($featured=="Yes") {echo "Checked";} ?> type="radio" name="featured" value="Yes"> Yes
+                                  <input <?php if($featured=="Yes") {echo "Checked";} ?> type="radio" name="featured" value="Yes"> Yes
                                     <input <?php if($featured=="No") {echo "Checked";} ?>type="radio" name="featured" value="No"> No
 
                                 </td>
@@ -137,7 +142,7 @@
                                 <input type="hidden" name="current_iamge" value=<?php  echo $current_image;?>>
                                 
                                 <input type="hidden" name="id" value="<?php  echo $id;?>">
-                                <input type="submit" name="submit" value="Update category" class="btn-primary" >
+                                <input type="submit" name="submit" value="Update category" class="btn btn-success" >
 
                             </td>
 

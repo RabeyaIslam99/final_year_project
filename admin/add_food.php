@@ -29,7 +29,7 @@
             
 
            <form action="" method="POST" enctype="multipart/form-data">
-             <table class="tbl-30">
+             <table class="tbl-40">
                <tr>
                  <td>Title:</td>
                  <td>
@@ -37,7 +37,7 @@
                  </td>
                </tr>
                <tr> 
-                 <td>Description:</td>
+                 <td>Description: </td>
 
                  <td> <textarea name="description" col="30" rows="5" placeholder="Description of food">  </textarea> </td>
 
@@ -51,11 +51,11 @@
 
                </tr>
                <tr>
-               <td>Select Image:</td>
+               <td>Image:</td>
               
                  <td>
-
-                 <input type="file" name="image">
+                
+                <input type="file" name="image">
                 
                </td>
 

@@ -13,9 +13,14 @@
                     <a href="#"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
                 </li>
             </ul>
+              <div style="color: white;">
+                  Call :01745402702 <br>
+                  Email: homoliciousyoufood@gmail.com
+                 
 
+              </div> 
             <div class="container text-center">
-            <p style="color: white;">All rights reserved. Designed By <br>
+            <p style="color: white;">© All rights reserved. Designed By <br>
              <a href="#">Rabeya Islam</a></p>
         </div>
         </div>

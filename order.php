@@ -1,4 +1,6 @@
-<?php include('partials-font/menu.php'); ?>
+<?php
+ob_start();
+ include('partials-font/menu.php'); ?>
 <?php
 // Initialize the session
 
@@ -110,6 +112,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
                     <div class="order-label">Email</div>
                     <input type="email" name="email"  class="input-responsive" required>
+                    
+                    <div class="order-label">Payement Method</div>
+                    <select name="Method">
+<option value="Cash on Delivery">Cash On Delivery</option>
+<option value="bkash">B Kash</option>
+
+</select>
 
                     <div class="order-label">Address</div>
                     <textarea name="address" rows="3"  class="input-responsive" required></textarea>
@@ -135,7 +144,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     $order_date = date("Y-m-d h:i:sa"); //Order DAte
 
                     $status = "Ordered";  // Ordered, On Delivery, Delivered, Cancelled
-
+                    $selected_val = $_POST['Method'];
                     $customer_name = $_POST['full-name'];
                     $customer_contact = $_POST['contact'];
                     $customer_email = $_POST['email'];
@@ -151,6 +160,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         total = $total,
                         order_date = '$order_date',
                         status = '$status',
+                        payment = '$selected_val',
                         customer_name = '$customer_name',
                         customer_contact = '$customer_contact',
                         customer_email = '$customer_email',
@@ -190,7 +200,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <section class="text-center mb-4 " >
     <div class="container "  style=" width:600px; height: 50px; margin-bottom:200px; margin-top:50px;">
      <h1 >Get The Latest Meals</h1>
-     <p >And receive $20 coupon for first order</p>
+     <p >And receive ৳ 20 coupon for first order</p>
      <div class="input-group " >
   <input type="text" class="form-control" placeholder=" username" aria-label="Recipient's username" aria-describedby="basic-addon2">
   <span class="  btn-primary p-4" id="basic-addon2">Subscribe Us</span>

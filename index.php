@@ -60,8 +60,19 @@
         </div>
     </section>
 
+
+    <?php 
+        if(isset($_SESSION['order']))
+        {
+            echo $_SESSION['order'];
+            unset($_SESSION['order']);
+        }
+    ?>
+
+
+
        <!-- How it Works section card start -->
-       <h2 class="text-center">HOW IT WORKS</h2>
+       <h2 class="text-center mt-4">HOW IT WORKS</h2>
             <span id="head"></span>
 
        <section class=" container">
@@ -169,7 +180,7 @@
     <section class="categories">
         <div class="container">
             
-            <h2 class="text-center">Explore Foods</h2>
+            <h2 class="text-center">Explore Food Categories</h2>
             <span id="head"></span>
 
 
@@ -315,7 +326,7 @@
 
                    <div class="food-menu-desc">
                        <h4><?php echo $title;?></h4>
-                         <p class="food-price">$<?php echo $price; ?></p>
+                         <p class="food-price">৳ <?php echo $price; ?></p>
                          <p class="food-detail">
                              <?php  echo $description; ?>
                         </p>

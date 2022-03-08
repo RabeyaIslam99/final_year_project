@@ -67,7 +67,7 @@
 
         <form action="" method="POST">
 
-        <table class="tbl-30">
+        <table class="tbl-40">
                        <tr> 
                      <td>Food name :</td>
                             <td>
@@ -78,7 +78,7 @@
                         <tr>
                         <td>Price :</td>
                             <td>
-                            <b>$ <?php echo $price;?></b>
+                            <b>৳ <?php echo $price;?></b>
                                 
                             </td>
                         </tr> 

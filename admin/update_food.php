@@ -58,7 +58,7 @@
               <br><br>
 
               <form action="" method="POST" enctype="multipart/form-data">
-              <table class="tbl-30">
+              <table class="tbl-40">
 
               <tr>
                   <td>Title:</td>
@@ -79,7 +79,7 @@
                    </td>
                 </tr>
               <tr>
-                  <td>Current Image:</td>
+                  <td> Current Image:</td>
                   <td>
                      <?php  
                      
@@ -102,7 +102,7 @@
 
               </tr>
               <tr>
-                  <td>Select iamge:</td>
+                  <td >New Iamge:</td>
                   <td>
                       <input type="file" name="image" >
                   </td>

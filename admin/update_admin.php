@@ -47,7 +47,7 @@
 
         <form action="" method="POST">
 
-            <table class="tbl-30">
+            <table class="tbl-35">
                 <tr>
                     <td>Fullname:   </td>
                     <td>

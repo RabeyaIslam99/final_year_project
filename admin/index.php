@@ -10,7 +10,7 @@
         <!-- Main Content Section Starts -->
         <div class="main-content">
             <div >
-                <h1 class="text-center text-success" >Administrator Dashboard</h1>
+                <h1 class="text-center text-success"> Administrator Dashboard</h1>
                 <br><br>
                 <?php 
                     if(isset($_SESSION['login']))
@@ -85,7 +85,7 @@
 
                     ?>
 
-                    <h1>$<?php echo $total_revenue; ?></h1>
+                    <h1>৳<?php echo $total_revenue; ?></h1>
                     <br />
                     Revenue Generated
     </div>

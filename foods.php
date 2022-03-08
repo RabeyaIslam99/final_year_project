@@ -52,7 +52,7 @@
                              
 
                              <div>
-                      <div class="food-menu-box  animate__animated animate__fadeInLeftBig mb-3">
+                      <div class="food-menu-box mb-3">
                          <div class="food-menu-img">
                              <?php 
                              //check whether image is available or not
@@ -74,7 +74,7 @@
 
                     <div class="food-menu-desc">
                     <h4><?php echo $title; ?></h4>
-                    <p class="food-price">$<?php echo $price;?></p>
+                    <p class="food-price">৳  <?php echo $price;?></p>
                     <!-- <p class="food-detail">
                          <?php echo $description;?>
                     </p> -->
@@ -109,7 +109,7 @@
      <section class="text-center mb-4 " >
     <div class="container "  style=" width:600px; height: 50px; margin-bottom:200px; margin-top:50px;">
      <h1 >Get The Latest Meals</h1>
-     <p >And receive $20 coupon for first order</p>
+     <p >And receive ৳20 coupon for first order</p>
      <div class="input-group " >
   <input type="text" class="form-control" placeholder=" username" aria-label="Recipient's username" aria-describedby="basic-addon2">
   <span class="  btn-primary p-4" id="basic-addon2">Subscribe Us</span>
