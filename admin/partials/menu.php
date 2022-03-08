@@ -82,7 +82,7 @@
                     
                     <li style="margin-top:300px;">
                         <a href="logout.php" class="nav-link px-0 align-middle " >
-                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline text-dark btn btn-light">Log Out
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-sm-inline text-dark btn btn-light">Log Out
 </span> </a>
                     </li>
                   

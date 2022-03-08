@@ -1,7 +1,10 @@
 <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark "  >
-<?php include('partials/menu.php'); ?>
+            
+<?php
+ ob_start();
+ include('partials/menu.php'); ?>
 </div>
         </div>
         <div class="col py-3" style="float: left;
@@ -222,8 +225,12 @@
 
                            //rename the image
 
-                            $ext = end(explode('.', $image_name));//get the extension of the image
-                            $image_name = "Food_name_".rand(0000, 9999).'.'.$ext;//this will be rename image
+                           $ext = explode('.', $image_name);
+                        
+                           $file_extension = end($ext); //Gets the extension of the image
+   
+                           $image_name = "Food-Name-".rand(0000, 9999).'.'.$file_extension;//get the extension of the image
+                         //this will be rename image
 
                          //get the source path and destination path
                          $src_path = $_FILES['image']['tmp_name'];//src path

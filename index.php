@@ -1,4 +1,5 @@
-<?php include('partials-font/menu.php'); ?>
+<?php ob_start();
+include('partials-font/menu.php'); ?>
 
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search text-center mt-0">

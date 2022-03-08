@@ -14,49 +14,47 @@
      </br> </br> 
     <!--Button to add Admin-->
 
-    <a href="<?php echo SITEURL;?>admin/add_food.php" id="add_more"  class="btn btn-success"> Add More Food </a>
+    
+      
+<?php 
+                    if(isset($_SESSION['add']))
+                    {
+                        echo $_SESSION['add'];
+                        unset($_SESSION['add']);
+                    }
+
+                    if(isset($_SESSION['delete']))
+                    {
+                        echo $_SESSION['delete'];
+                        unset($_SESSION['delete']);
+                    }
+
+                    if(isset($_SESSION['upload']))
+                    {
+                        echo $_SESSION['upload'];
+                        unset($_SESSION['upload']);
+                    }
+
+                    if(isset($_SESSION['unauthorize']))
+                    {
+                        echo $_SESSION['unauthorize'];
+                        unset($_SESSION['unauthorize']);
+                    }
+
+                    if(isset($_SESSION['update']))
+                    {
+                        echo $_SESSION['update'];
+                        unset($_SESSION['update']);
+                    }
+                
+                ?>
+
+
+
+
+<a href="<?php echo SITEURL;?>admin/add_food.php" id="add_more"  class="btn btn-success"> Add More Food </a>
 </br> </br> </br> </br>
       
-      
-           <?php 
-               if(isset($_SESSION['add']))
-                {
-                    echo $_SESSION['add'];
-                    unset($_SESSION['add']);
-                }
-                
-            
-                if(isset($_SESSION['upload']))
-                {
-                    echo $_SESSION['upload'];
-                    unset($_SESSION['upload']);
-                }
-                if(isset($_SESSION['delete']))
-                {
-                    echo $_SESSION['delete'];
-                    unset($_SESSION['delete']);
-                }
-               
-                if(isset($_SESSION[' unauthorize']))
-                {
-                    echo $_SESSION['unauthorize'];
-                    unset($_SESSION['unauthorize']);
-                }
-                if(isset($_SESSION[' updated']))
-                {
-                    echo $_SESSION['updated'];
-                    unset($_SESSION['updated']);
-                }
-               
-                
-                
-
-              
-            ?>
-
-
-
-
 
        <table class="tbl-full">
        <tr>

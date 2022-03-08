@@ -41,8 +41,9 @@
            <th>Qty.</th>
            <th>Total</th>
            <th>Order Date</th>
+           <th>Payment method</th>
            <th>Status</th>
-           <th>Customer name</th>
+          
            
            <th> Email</th>
            <th>Address</th>
@@ -74,8 +75,8 @@
                    $total = $row['total'];
                    $order_date = $row['order_date'];
                    $status = $row['status'];
-                   $customer_name = $row['customer_name'];
                  
+                   $payment_method= $row['payment'];
                    $customer_email= $row['customer_email'];
                    $customer_address = $row['customer_address'];
 
@@ -86,10 +87,10 @@
                      
                         <td><?php echo $food ;?></td>
                         <td><?php echo $price ;?></td>
-                        <td><?php echo $qty  ;?></td>
+                        <td>*<?php echo $qty  ;?></td>
                         <td><?php echo  $total ;?></td>
                         <td><?php echo $order_date  ;?></td>
-
+                        <td><?php echo $payment_method  ;?></td>
                         <td>
                             <?php 
                             //ordered, ondelivery, canceled and delivered
@@ -114,7 +115,7 @@
                             ?>
                         </td>
 
-                        <td><?php echo $customer_name ;?></td>
+                       
                        
                         <td ><?php echo $customer_email;?></td>
                         <td><?php echo  $customer_address ;?></td>

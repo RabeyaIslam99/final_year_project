@@ -65,6 +65,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                 $status = $row['status'];
                                 $customer_address = $row['customer_address'];
                                 
+                                
                                 ?>
 
                                     <tr>
