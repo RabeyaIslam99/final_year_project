@@ -67,6 +67,11 @@
                     <a href="myorder.php">My order</a>
                 
                 </li>
+                        <li>
+                    
+                    <a href="cart.php">Cart</a>
+                
+                </li>
                 <li >
                         <a  href="contactus.php">Contact Us</a>
                     </li>

@@ -1,11 +1,15 @@
+
 <?php
 ob_start();
- include('partials-font/menu.php'); ?>
+include('partials-font/menu.php'); 
+$cart =  $_SESSION['cart'];
+?>
 <?php
 // Initialize the session
 
 if(!isset($_SESSION)) { 
     session_start(); 
+    
   } 
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
@@ -13,123 +17,124 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 ?>
-    <?php 
-        //CHeck whether food id is set or not
-        if(isset($_GET['food_id']))
-        {
-            //Get the Food id and details of the selected food
-            $food_id = $_GET['food_id'];
 
-            //Get the DEtails of the SElected Food
-            $sql = "SELECT * FROM tbl_food WHERE id=$food_id";
-            //Execute the Query
-            $res = mysqli_query($conn, $sql);
-            //Count the rows
-            $count = mysqli_num_rows($res);
-            //CHeck whether the data is available or not
-            if($count==1)
-            {
-                //WE Have DAta
-                //GEt the Data from Database
-                $row = mysqli_fetch_assoc($res);
 
-                $title = $row['title'];
-                $price = $row['price'];
-                $image_name = $row['image_name'];
-            }
-            else
-            {
-                //Food not Availabe
-                //REdirect to Home Page
-                header('location:'.SITEURL);
-            }
-        }
-        else
-        {
-            //Redirect to homepage
-            header('location:'.SITEURL);
-        }
-    ?>
-<!-- <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a> -->
+
 
 
     <!-- fOOD sEARCH Section Starts Here -->
-    <section class="food-search2">
+    <section class="food-search2 p-3">
         <div class="container">
             
-            <h2 class="text-center text-white pt-4">Fill this form to confirm your order.</h2>
+            <h2 class="text-center text-white">Fill this form to confirm your order.</h2>
 
-            <form action="" method="POST" class="order text-white p-2">
+            <form action="" method="POST" class="order">
                 <fieldset>
-                    <legend >Selected Food</legend>
+                    <legend class="text-center text-white" >Selected Food</legend>
 
                     <div class="food-menu-img">
-                        <?php 
-                        
-                            //CHeck whether the image is available or not
-                            if($image_name=="")
-                            {
-                                //Image not Availabe
-                                echo "<div class='error'>Image not Available.</div>";
-                            }
-                            else
-                            {
-                                //Image is Available
-                                ?>
-                                <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
-                                <?php
-                            }
-                        
-                        ?>
-                        
+                    <?php
+       $total = 0;
+       $namesItems =" ";
+       
+    foreach($cart as $key => $value){
+        // echo $key ." : ". $value['quantity'] . "<br>";
+        
+        $sql = "SELECT * FROM tbl_food where id = $key";
+$result = mysqli_query($conn, $sql);
+
+$row = mysqli_fetch_assoc($result)
+        ?>
+
+           
+            <tr>
+           <td>
+               <img src="images/food/<?php echo $row['image_name']; ?>" alt="" style="hieght:150px; width:150px; margin-left:10px;">
+            </td>
+           
+            </tr>
+
+        <?php
+        
+                    $namesItems .=  "$row[title] ,";
+                
+                
+                $total = $total +  ($row['price'] * $value['quantity']);
+    }
+
+      
+    
+    ?>
+
                     </div>
     
                     <div class="food-menu-desc">
-                        <h3><?php echo $title; ?></h3>
-                        <input type="hidden" name="food" value="<?php echo $title; ?>">
+                        <h3 class="text-center text-white"><?php echo $namesItems; ?></h3>
+                        <input type="hidden"  name="food" value="<?php echo $namesItems; ?>">
 
-                        <p class="food-price">$<?php echo $price; ?></p>
-                        <input type="hidden" name="price" value="<?php echo $price; ?>">
+                        <p class="food-price text-white">Total : ৳<?php echo $total; ?></p>
+                        <input type="hidden"  name="price" value="<?php echo $total; ?>">
 
-                        <div class="order-label">Quantity</div>
-                        <input type="number" name="qty" class="input-responsive" value="1" required>
+                     
                         
+                
                     </div>
 
                 </fieldset>
                 
-                <fieldset>
-                    <legend>Delivery Details</legend>
+                <fieldset >
+                    <legend class="text-center text-white">Delivery Details</legend>
                     <div class="order-label">Full Name</div>
                       
 
      
                   
-                    <input type="text" readonly='readonly' name="full-name" value="<?php echo htmlspecialchars($_SESSION["username"]); ?>" class="input-responsive" required>
+                    <input type="text" readonly='readonly' name="full-name" value="<?php echo htmlspecialchars($_SESSION["username"]); ?>"  class="input-responsive" required>
                     
-                    <div class="order-label">Phone Number</div>
+                    <div class="order-label text-center text-white">Phone Number</div>
                     <input type="tel" name="contact" class="input-responsive" required>
 
                     <div class="order-label">Email</div>
-                    <input type="email" name="email"  class="input-responsive" required>
-                    
+                    <input type="email" name="email" class="input-responsive" required>
+                     
                     <div class="order-label">Payement Method</div>
                     <select name="Method">
                     <option value="Cash on Delivery">Cash On Delivery</option>
                     <option value="bkash">B Kash</option>
 
-                    </select>
-
+</select>
                     <div class="order-label">Address</div>
-                    <textarea name="address" rows="3"  class="input-responsive" required></textarea>
-
+                    <textarea name="address" rows="7" class="input-responsive" required></textarea>
+                    
+                    
                     <input type="submit" name="submit" value="Confirm Order" class="btn btn-primary">
                 </fieldset>
 
             </form>
-
             <?php 
-
+            //CHeck whether Update Button is Clicked or Not
+            if (isset($_POST['submit'])) {
+                $fromEmail = 'homoliciousyoufood@gmail.com';
+                $toEmail = $_POST['email'];
+                
+                $food = $_POST['food'];
+                $price = $_POST['price'];
+                $to = $toEmail;
+                $subject = 'order confirmed' .$food.
+                $headers = "MIME-Version: 1.0" . "\r\n";
+                $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+                $headers .= 'From: '.$fromEmail.'<'.$fromEmail.'>' . "\r\n".'Reply-To: '.$fromEmail."\r\n" . 'X-Mailer: PHP/' . phpversion();
+                $message = 'thank you sir for your order'. 
+                $result = @mail($to, $subject, $message, $headers);
+            
+            
+            }
+                
+        ?>
+              
+            <?php
+            ob_start(); 
+              
                 //CHeck whether submit button is clicked or not
                 if(isset($_POST['submit']))
                 {
@@ -137,27 +142,34 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
                     $food = $_POST['food'];
                     $price = $_POST['price'];
-                    $qty = $_POST['qty'];
+                    
 
-                    $total = $price * $qty; // total = price x qty 
+                    // total = price x qty 
 
                     $order_date = date("Y-m-d h:i:sa"); //Order DAte
 
                     $status = "Ordered";  // Ordered, On Delivery, Delivered, Cancelled
                     $selected_val = $_POST['Method'];
+                   
                     $customer_name = $_POST['full-name'];
                     $customer_contact = $_POST['contact'];
                     $customer_email = $_POST['email'];
                     $customer_address = $_POST['address'];
+                       ///filtering email
 
+                       if (filter_var($customer_email, FILTER_VALIDATE_EMAIL) === false) {
+    
+                               exit("invalid format");
+    
+                           }
 
-                    //Save the Order in Databaase
+             else{
+                 //Save the Order in Databaase
                     //Create SQL to save the data
                     $sql2 = "INSERT INTO tbl_order SET 
                         food = '$food',
                         price = $price,
-                        qty = $qty,
-                        total = $total,
+                        
                         order_date = '$order_date',
                         status = '$status',
                         payment = '$selected_val',
@@ -172,18 +184,25 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     //Execute the Query
                     $res2 = mysqli_query($conn, $sql2);
 
+             }
                     //Check whether query executed successfully or not
                     if($res2==true)
                     {
                         //Query Executed and Order Saved
                         $_SESSION['order'] = "<div class='success text-center'>Food Ordered Successfully.</div>";
+                        unset($_SESSION['cart']);
                         header('location:'.SITEURL);
+                        exit;
+                        
+                        
+                        
                     }
                     else
                     {
                         //Failed to Save Order
                         $_SESSION['order'] = "<div class='error text-center'>Failed to Order Food.</div>";
                         header('location:'.SITEURL);
+                        exit;
                     }
 
                 }
@@ -193,27 +212,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </div>
     </section>
     <!-- fOOD sEARCH Section Ends Here -->
-
-
-
-    <!-- Subscribe us -->
-    <section class="text-center mb-4 " >
-    <div class="container "  style=" width:600px; height: 50px; margin-bottom:200px; margin-top:50px;">
-     <h1 >Get The Latest Meals</h1>
-     <p >And receive ৳ 20 coupon for first order</p>
-     <div class="input-group " >
-  <input type="text" class="form-control" placeholder=" username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-  <span class="  btn-primary p-4" id="basic-addon2">Subscribe Us</span>
-</div> <br> <br>
-     
-
-     <div class="mb-3 form-check text-left">
-    <input type="checkbox" class="form-check-input" > 
-    <label class="form-check-label" for="exampleCheck1">Subscribe us for get the latest update.</label>
-  </div>
-  </div>  <br> <br>
-    </section>
-
-    <div style="margin-top:200px;" >
-        <?php include('partials-font/footer.php'); ?> 
-        </div>
+      <div style="margin-top:200px;">
+      <?php include('partials-font/footer.php'); ?>
+      </div>
+ 

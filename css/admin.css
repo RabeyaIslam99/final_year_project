@@ -59,9 +59,9 @@
     text-decoration: none;
     font-weight: bold;
   }
-  .btn-primary:hover {
+  /* .btn-primary:hover {
     background-color: #3742fa;
-  }
+  } */
   
   .btn-secondary {
     background-color: #7bed9f;

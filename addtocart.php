@@ -1,27 +1,20 @@
+
 <?php
-	session_start();
- 
-	if(isset($_GET['id']) & !empty($_GET['id'])){
-		if(isset($_SESSION['cart']) & !empty($_SESSION['cart'])){
- 
-			$items = $_SESSION['cart'];
-			$cartitems = explode(",", $items);
-			if(in_array($_GET['id'], $cartitems)){
-				header('location: index.php?status=incart');
-			}else{
-				$items .= "," . $_GET['id'];
-				$_SESSION['cart'] = $items;
-				header('location: index.php?status=success');
-				
-			}
- 
-		}else{
-			$items = $_GET['id'];
-			$_SESSION['cart'] = $items;
-			header('location: index.php?status=success');
-		}
-		
-	}else{
-		header('location: index.php?status=failed');
-	}
+ session_start();
+if(isset($_GET['id'])){
+
+    if(isset($_GET['quantity'])){
+        $quantity = $_GET['quantity'];
+    }else{
+        $quantity = 1;
+    }
+     $id = $_GET['id'];
+
+   $_SESSION['cart'][$id] = array('quantity' => $quantity);
+    header('location:cart.php');
+
+   echo '<pre>';
+   print_r($_SESSION['cart']);
+   echo '</pre>';
+ }
 ?>

@@ -1,53 +1,87 @@
 <?php 
-session_start();
 
 
 include('partials-font/menu.php'); 
 
+
+?>
+ <?php  
+
+if (!isset($_SESSION["cart"]))
+   {
+      header("location: index.php");
+   }
+else{
+    $cart =  $_SESSION['cart'];
+}
+
+
+//  print_r($cart);
+
 ?>
  
  <div class="container">
-<?php 
-$items = $_SESSION['cart'];
-$cartitems = explode(",", $items);
-?>
- <?php
-            $items = $_SESSION['cart'];
-            $cartitems = explode(",", $items);
-            echo count($cartitems);
-          ?>
-	<div class="row">
-	  <table class="table">
-	  	<tr>
-	  		<th>S.NO</th>
-	  		<th>Item Name</th>
-	  		<th>Price</th>
-	  	</tr>
-		<?php
+    <h2 class='text-center text-white'>Cart</h2>
+
+   <table class="table table-bordered bg-white">
+       <tr>
+           <th>Image</th>
+           <th>Product</th>
+           <th>Price</th>
+           <th>Quantity</th>
+           <th>Total</th>
+           <th>Action</th>
+       </tr>
+
+       <?php
+       $total = 0;
+
+    foreach($cart as $key => $value){
+        // echo $key ." : ". $value['quantity'] . "<br>";
         
-		$total = '';
-		$i=1;
-		 foreach ($cartitems as $key=>$id) {
-			$sql = "SELECT * FROM tbl_food WHERE id = $id";
-			$res=mysqli_query($conn, $sql);
-			$r = mysqli_fetch_assoc($res);
-		?>	  	
-	  	<tr>
-	  		<td><?php echo $i; ?></td>
-	  		<td><a href="delcart.php?remove=<?php echo $key; ?>">Remove</a> <?php echo $r['title']; ?></td>
-	  		<td>$<?php echo $r['price']; ?></td>
-	  	</tr>
-		<!-- <?php 
-			$total = $total + $r['price'];
-			$i++; 
-			} 
-		?> -->
-	
-	  </table>
-	  
-	</div>
- 
+        $sql = "SELECT * FROM tbl_food where id = $key";
+$result = mysqli_query($conn, $sql);
+
+$row = mysqli_fetch_assoc($result)
+        ?>
+
+
+            <tr>
+           <td><img src="images/food/<?php echo $row['image_name']; ?>" alt="" style="hieght:100px; width:100px;"></td>
+           <td><?php echo $row['title']?> </td>
+           <td><?php echo $row['price']?> </td>
+           <td><?php echo $value['quantity']?></td>
+           <td><?php echo $row['price'] * $value['quantity'] ?> </td>
+            <td><a href='deleteCart.php?id=<?php echo $key; ?>'>Remove</a></td>
+            </tr>
+
+        <?php
+
+$total = $total +  ($row['price'] * $value['quantity']);
+    }
+
+      
+    
+    ?>
+      
+   </table>
+
+   <div class="text-right">
+    <!-- <button class="btn mr-3">Update Cart</button> -->
+
+    <a class="btn btn-kit p-3 mb-3" href='order.php'>Checkout</a>
 </div>
- 
- 
-<?php include('partials-font/footer.php'); ?>
+<div class="card">
+<div class="card-header">Total</div>
+<div class="card-body">
+Total Amount: ৳ <?php echo $total; ?>.00/-
+</div>
+</div>
+
+</div>
+
+
+
+
+
+

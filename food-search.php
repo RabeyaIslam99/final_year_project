@@ -2,7 +2,7 @@
     <?php include('partials-font/menu.php'); ?>
 
     <!-- fOOD sEARCH Section Starts Here -->
-    <section class="food-search2 text-center">
+    <section class="food-search2 text-center" >
         <div class="container">
             <?php 
 
@@ -12,7 +12,7 @@
             ?>
 
 
-            <h2><a href="#" class="text-dark">Foods on Your Search "<?php echo $search; ?>"</a></h2>
+            <h2 ><a href="#" class="text-white" style="margin: top 20px;">Foods on Your Search "<?php echo $search; ?>"</a></h2>
 
         </div>
     </section>

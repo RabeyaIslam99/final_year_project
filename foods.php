@@ -80,8 +80,10 @@
                     </p> -->
                     <br>
 
-                    <a href="<?php echo SITEURL ; ?>order.php?food_id=<?php echo $id;?>" class="btn btn-primary">Order Now</a>
-                    <p><a href="addtocart.php?id=<?php echo $id;?>" class="btn btn-primary" role="button">Add to Cart</a></p>
+                  
+                    <a href='addToCart.php?id=<?php echo $id; ?>'  class="btn btn-kit  btn-xs pull-right"  >
+                        <i class="fa fa-cart-arrow-down"></i> Add To Cart
+                    </a>
                 </div>
             </div>
                            <?php
@@ -113,7 +115,7 @@
      <p >And receive ৳20 coupon for first order</p>
      <div class="input-group " >
   <input type="text" class="form-control" placeholder=" username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-  <span class="  btn-primary p-4" id="basic-addon2">Subscribe Us</span>
+  <span class=" btn btn-kit p-4" id="basic-addon2">Subscribe Us</span>
 </div> <br> <br>
      
 

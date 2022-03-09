@@ -333,7 +333,9 @@ include('partials-font/menu.php'); ?>
                         </p>
                        <br>
 
-                       <a href="<?php echo SITEURL ; ?>order.php?food_id=<?php echo $id;?>" class="btn btn-primary " >Order Now</a>
+                       <a href='addToCart.php?id=<?php echo $id; ?>'  class="btn btn-kit  btn-xs pull-right"  >
+                        <i class="fa fa-cart-arrow-down"></i> Add To Cart
+                    </a>
                    </div>
               </div>
 

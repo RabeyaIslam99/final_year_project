@@ -84,19 +84,19 @@ a:hover{
 }
 .btn-kit{
     border: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
     border-radius: 5px;
     background-color: #ff6b81;
     color: white;
     cursor: pointer;
-    padding: 7px 20px;
+    padding: 10px 20px;
 }
-.btn-kit:hover{
+/* .btn-kit:hover{
     color: #ff4757;
     background-color: white ;
     border:  2px solid #ff4757;
 
-}
+} */
 
 
 .btn-primary{
@@ -106,12 +106,12 @@ a:hover{
    
 }
 
-.btn-primary:hover{
+/* .btn-primary:hover{
     color: #ff4757;
     background-color: white ;
     border:  2px solid #ff4757;
     
-}
+} */
 h2{
     color: #2f3542;
     font-size: 2rem;
