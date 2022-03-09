@@ -69,7 +69,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <input type="submit" name="submit" style="padding: 10px 20px; margin-top:10px;" value="Send" class="btn btn-primary btn-send">
+                                    <input type="submit" name="submit" style="padding: 10px 20px; margin-top:10px;" value="Send" class="btn btn-kit btn-send">
                                 </div>
                             </div>
                             <div class="row">
@@ -113,7 +113,7 @@
      <p >And receive $20 coupon for first order</p>
      <div class="input-group " >
   <input type="text" class="form-control" placeholder=" username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-  <span class="  btn-primary p-4" id="basic-addon2">Subscribe Us</span>
+  <span class=" btn btn-kit p-4" id="basic-addon2">Subscribe Us</span>
 </div> <br> <br>
      
 
