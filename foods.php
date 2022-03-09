@@ -81,6 +81,7 @@
                     <br>
 
                     <a href="<?php echo SITEURL ; ?>order.php?food_id=<?php echo $id;?>" class="btn btn-primary">Order Now</a>
+                    <p><a href="addtocart.php?id=<?php echo $id;?>" class="btn btn-primary" role="button">Add to Cart</a></p>
                 </div>
             </div>
                            <?php

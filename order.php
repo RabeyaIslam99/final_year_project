@@ -115,10 +115,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     
                     <div class="order-label">Payement Method</div>
                     <select name="Method">
-<option value="Cash on Delivery">Cash On Delivery</option>
-<option value="bkash">B Kash</option>
+                    <option value="Cash on Delivery">Cash On Delivery</option>
+                    <option value="bkash">B Kash</option>
 
-</select>
+                    </select>
 
                     <div class="order-label">Address</div>
                     <textarea name="address" rows="3"  class="input-responsive" required></textarea>

@@ -22,7 +22,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     
                 <br><br>
 
-                <table class="tbl-full"  >
+                <table class="table table-striped"  >
                     <tr>
                         <th width="5%">#</th>
                         <th width="10%">Order Date</th>
