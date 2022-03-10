@@ -47,9 +47,7 @@
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start mt-5" id="menu">
                     <li class="nav-item">
                         <a href="index.php" class="nav-link align-middle px-0">
-                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline text-white">DashBoard</span>
-                        </a>
-                    </li>
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none
                     <li class="nav-item">
                         <a href="manage_category.php" class="nav-link align-middle px-0">
                             <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline text-white">Manage Category</span>
