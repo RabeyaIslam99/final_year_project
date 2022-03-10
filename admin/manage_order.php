@@ -5,8 +5,7 @@
 </div>
         </div>
         <div class="col py-3" style="float: left;
-        width: 71%; height:655px; overflow-y:scroll ;
-">
+        width: 71%; height:655px; overflow-y:scroll ;">
 
 <div class="main-content">
 
@@ -33,7 +32,7 @@
 
 
 
-       <table class="tbl-full">
+       <table class="table">
        <tr>
           
            <th>Food</th>
